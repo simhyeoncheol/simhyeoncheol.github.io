@@ -151,6 +151,31 @@ h6 {
     padding-left: 12px;
     padding-right: 12px;
   }
+  .skillsImg {
+    height: 3rem !important;
+  }
+  .skillsDiv{
+    width: 13rem  !important;
+  }
+}
+@media (min-width: 1024px) {
+  .skillsImg{
+    height: 5rem !important;
+  }
+  .skillsImg2{
+    height: 4rem !important;
+  }
+  .skillsDiv{
+    width: 18rem  !important;
+  }
+}
+@media (max-width: 768px ){
+  .skillsImg{
+    height: 2rem !important;
+  }
+  .skillsDiv{
+    width: 10rem  !important;
+  }
 }
 
 /*--------------------------------------------------------------
