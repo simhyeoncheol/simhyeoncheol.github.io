@@ -266,7 +266,8 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
+  /* background: url("../img/hero-bg.jpg") top center; */
+  background: url("../img/50156_95585_3443.png") top center;
   background-size: cover;
 }
 
@@ -629,7 +630,7 @@ section {
   text-align: center;
   background: rgba(20, 157, 221, 0.75);
   transition: 0.3s;
-  width: 50%;
+  width: 100%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
@@ -1128,4 +1129,74 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+.skillsTitle {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #56585C;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.skillsDiv {
+  padding: 1.5rem;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 0.7rem;
+  background-color: #fff;
+  margin-bottom: 0;
+  box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+  width: 18rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skillsDiv:hover {
+  transform: scale(1.02);
+}
+
+.skillsBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skillsImg {
+  height: 7rem;
+}
+
+.skillsWrap {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.skillsWrap::-webkit-scrollbar {
+  width: 5px;
+  display: none;
+}
+
+.skillsWrap::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+  border-radius: 5px;
+}
+
+.skillsWrap::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+}
+
+.contact .info a {
+  padding: 0 0 10px 17px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+#contact>div>div.row.aos-init.aos-animate>div>div>div.github>i:hover {
+  color: white;
+  background-color: #149ddd;
+}
+.st3{
+  fill:#fff;
 }
