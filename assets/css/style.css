@@ -151,31 +151,6 @@ h6 {
     padding-left: 12px;
     padding-right: 12px;
   }
-  .skillsImg {
-    height: 3rem !important;
-  }
-  .skillsDiv{
-    width: 13rem  !important;
-  }
-}
-@media (min-width: 1024px) {
-  .skillsImg{
-    height: 5rem !important;
-  }
-  .skillsImg2{
-    height: 4rem !important;
-  }
-  .skillsDiv{
-    width: 18rem  !important;
-  }
-}
-@media (max-width: 768px ){
-  .skillsImg{
-    height: 2rem !important;
-  }
-  .skillsDiv{
-    width: 10rem  !important;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -453,43 +428,6 @@ section {
 
 .facts .count-box a:hover {
   color: #1f5297;
-}
-
-/*--------------------------------------------------------------
-# Akills
---------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #050d18;
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: #dce8f8;
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #149ddd;
 }
 
 /*--------------------------------------------------------------
@@ -1131,62 +1069,6 @@ section {
   }
 }
 
-.skillsTitle {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: #56585C;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 1px solid #ccc;
-}
-
-.skillsDiv {
-  padding: 1.5rem;
-  height: auto;
-  flex-shrink: 0;
-  border-radius: 0.7rem;
-  background-color: #fff;
-  margin-bottom: 0;
-  box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
-  width: 18rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.skillsDiv:hover {
-  transform: scale(1.02);
-}
-
-.skillsBody {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.skillsImg {
-  height: 7rem;
-}
-
-.skillsWrap {
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-.skillsWrap::-webkit-scrollbar {
-  width: 5px;
-  display: none;
-}
-
-.skillsWrap::-webkit-scrollbar-thumb {
-  background-color: #2f3542;
-  border-radius: 5px;
-}
-
-.skillsWrap::-webkit-scrollbar-track {
-  background-color: grey;
-  border-radius: 10px;
-}
-
 .contact .info a {
   padding: 0 0 10px 17px;
   margin-bottom: 20px;
@@ -1199,4 +1081,336 @@ section {
 }
 .st3{
   fill:#fff;
+}
+
+/*--------------------------------------------------------------
+# About - 현재 재직 정보 배지
+--------------------------------------------------------------*/
+.about .about-now {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: #eef4fb;
+  border: 1px solid #dbe7f6;
+  font-size: 15px;
+  color: #1f5297;
+}
+
+.about .about-now i {
+  font-size: 17px;
+  color: #149ddd;
+}
+
+.about .about-now strong {
+  color: #050d18;
+}
+
+/*--------------------------------------------------------------
+# Career (경력 카드)
+--------------------------------------------------------------*/
+.resume .career-item {
+  position: relative;
+  background: #fff;
+  border: 1px solid #eef3fa;
+  border-left: 4px solid #d7e4f4;
+  border-radius: 10px;
+  padding: 24px 26px 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 4px 20px rgba(31, 82, 151, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.resume .career-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(31, 82, 151, 0.12);
+}
+
+.resume .career-item.current {
+  border-left-color: #149ddd;
+}
+
+.resume .career-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.resume .career-company {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #050d18;
+  margin: 0 0 6px 0;
+}
+
+.resume .career-role {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f5297;
+}
+
+.resume .career-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.resume .career-period {
+  font-size: 14px;
+  font-weight: 600;
+  color: #37517e;
+  background: #eef4fb;
+  border-radius: 20px;
+  padding: 5px 14px;
+}
+
+.resume .career-duration {
+  font-size: 13px;
+  font-weight: 600;
+  color: #7a8ba3;
+}
+
+.resume .badge-now {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: #149ddd;
+  border-radius: 20px;
+  padding: 5px 12px;
+}
+
+.resume .badge-now::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 6px;
+  vertical-align: middle;
+  animation: careerNowPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes careerNowPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.resume .career-desc {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+}
+
+.resume .career-desc li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #272829;
+}
+
+.resume .career-desc li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #149ddd;
+}
+
+.resume .tech-stack {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed #e4edf9;
+}
+
+.resume .tech-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.resume .tech-row:last-child {
+  margin-bottom: 0;
+}
+
+.resume .tech-label {
+  flex: 0 0 96px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #7a8ba3;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding-top: 5px;
+}
+
+.resume .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.resume .tech-row .tech-tags {
+  margin-top: 0;
+  flex: 1 1 auto;
+}
+
+.resume .tech-tags span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f5297;
+  background: #f4f8fd;
+  border: 1px solid #dbe7f6;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+@media (max-width: 575px) {
+  .resume .career-head {
+    flex-direction: column;
+  }
+
+  .resume .career-item {
+    padding: 20px 18px 16px;
+  }
+
+  .resume .tech-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .resume .tech-label {
+    flex: none;
+    padding-top: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Skills - 카테고리 카드 & 칩
+--------------------------------------------------------------*/
+.skills .skill-card {
+  height: 100%;
+  background: #fff;
+  border: 1px solid #eef3fa;
+  border-radius: 12px;
+  padding: 24px 26px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(31, 82, 151, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills .skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(31, 82, 151, 0.12);
+}
+
+.skills .skill-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 14px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eef3fa;
+}
+
+.skills .skill-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex: none;
+  border-radius: 10px;
+  background: #eef4fb;
+  color: #149ddd;
+}
+
+.skills .skill-card-icon i {
+  font-size: 22px;
+  line-height: 0;
+}
+
+.skills .skill-card-head h3 {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: #050d18;
+}
+
+.skills .skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #37517e;
+  background: #f4f8fd;
+  border: 1px solid #e1eaf6;
+  border-radius: 20px;
+  padding: 6px 13px;
+  transition: 0.25s;
+}
+
+.skills .chip i {
+  font-size: 16px;
+  line-height: 0;
+  color: #7a9cc6;
+  transition: 0.25s;
+}
+
+.skills .chip:hover {
+  border-color: #149ddd;
+  color: #149ddd;
+}
+
+.skills .chip:hover i {
+  color: #149ddd;
+}
+
+.skills .chip.core {
+  color: #fff;
+  background: #149ddd;
+  border-color: #149ddd;
+  font-weight: 600;
+}
+
+.skills .chip.core i {
+  color: #fff;
+}
+
+.skills .chip.core:hover {
+  background: #37b3ed;
+  border-color: #37b3ed;
+  color: #fff;
+}
+
+@media (max-width: 575px) {
+  .skills .skill-card {
+    padding: 20px 18px;
+  }
+
+  .skills .chip {
+    font-size: 12.5px;
+    padding: 5px 11px;
+  }
 }
