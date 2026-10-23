@@ -1414,3 +1414,65 @@ section {
     padding: 5px 11px;
   }
 }
+
+/*--------------------------------------------------------------
+# Career - 주요 업무 상세
+--------------------------------------------------------------*/
+.resume .career-projects {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px dashed #e4edf9;
+}
+
+.resume .career-project + .career-project {
+  margin-top: 16px;
+}
+
+.resume .career-project h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #050d18;
+  margin: 0;
+}
+
+.resume .career-project .career-desc {
+  margin-top: 8px;
+}
+
+.resume .career-project .career-desc li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details - 기능 목록 & 기술 태그
+--------------------------------------------------------------*/
+.portfolio-details .portfolio-info .detail-list {
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.portfolio-details .portfolio-info .detail-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.portfolio-details .portfolio-info .detail-list li + li {
+  margin-top: 0;
+}
+
+.portfolio-details .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.portfolio-details .tech-tags span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f5297;
+  background: #f4f8fd;
+  border: 1px solid #dbe7f6;
+  border-radius: 6px;
+  padding: 4px 10px;
+}
