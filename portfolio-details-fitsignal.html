@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>FitSignal - Portfolio Details</title>
+  <title>FitSignal - Portfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -68,70 +68,96 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfoio Details</h2>
+          <h2>FitSignal</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Portfoio Details</li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li>FitSignal</li>
           </ol>
         </div>
-
       </div>
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
+    <section id="portfolio-details" class="portfolio-details project-detail">
       <div class="container">
 
-        <div class="row gy-4">
+        <div class="project-hero">
+          <span class="project-kicker">(주)더바디채널 · App</span>
+          <h1>FitSignal</h1>
+          <p class="project-hook">손목 위의 심박을 앱 · 서버 · 건강 앱 세 곳에 같은 운동 한 건으로 남긴다.</p>
+          <div class="platform-chips"><span><i class="bi bi-phone"></i>iOS · Android</span><span><i class="bi bi-apple"></i>Apple Watch</span><span><i class="bi bi-smartwatch"></i>Wear OS</span></div>
+        </div>
+
+        <div class="portfolio-details-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <a href="assets/img/portfolio/portfolio-fitsignal.jpg" class="portfolio-lightbox" data-gallery="fitsignal" title="FitSignal — 심박 기반 운동 기록 · 소셜 앱">
+                    <img src="assets/img/portfolio/portfolio-fitsignal.jpg" alt="FitSignal — 심박 기반 운동 기록 · 소셜 앱">
+                  </a>
+                  <p class="slide-caption">FitSignal — 심박 기반 운동 기록 · 소셜 앱</p>
+                </div>
+                <div class="swiper-slide">
+                  <a href="assets/img/portfolio/fitsignal/2.jpg" class="portfolio-lightbox" data-gallery="fitsignal" title="데이터 흐름 — 워치 → 폰 → 서버 · 건강 앱">
+                    <img src="assets/img/portfolio/fitsignal/2.jpg" alt="데이터 흐름 — 워치 → 폰 → 서버 · 건강 앱">
+                  </a>
+                  <p class="slide-caption">데이터 흐름 — 워치 → 폰 → 서버 · 건강 앱</p>
+                </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="row gy-4 mt-2">
 
           <div class="col-lg-8">
-            <img src="assets/img/portfolio/portfolio-fitsignal.jpg" class="img-fluid rounded mb-4" alt="FitSignal 앱 화면">
-            <div class="portfolio-info">
+            <div class="detail-block">
               <h3>프로젝트 소개</h3>
-              <p>
-                (주)더바디채널의 심박 기반 운동 기록 · 소셜 앱입니다.<br>
-                스마트 워치로 측정한 심박 · 걸음 · 칼로리 · 경로를 기록하고, 피드 · 랭킹 · 챌린지로 회원끼리 함께 운동하도록 만드는 서비스로, 저는 앱과 백엔드 개발을 맡았습니다.
-              </p>
-              <h3 class="mt-4">주요 기능</h3>
-              <ul class="detail-list">
-                <li>Apple Watch HKLiveWorkoutBuilder 기반 워치 단독 측정 · 폰 동기화, 삼성헬스 · Galaxy Watch 심박 연동</li>
-                <li>심박 기반 Keytel 칼로리 공식 적용, 시간 가중 평균 심박 계산, 실기기 없이 워치 연동을 검증하는 테스트 환경 구축</li>
-                <li>피드 · 스토리 · 팔로우 · 러닝 매칭 · 모임 · 랭킹 · 30일 출석 챌린지 · DM 등 소셜 기능, 카카오맵 경로 표시</li>
-                <li>백엔드 DB 스키마 재설계 및 데이터 이관 — 동시 가입 시 id 충돌(max(id)+1 → AUTO_INCREMENT) 해결</li>
-                <li>운동기록 bulk API · 랭킹 집계 배치 · ERP 출결 연동 챌린지 개발, HTTP 에러 코드 정상화</li>
-                <li>바디채널 계정 로그인 통합, Google Play 심사 반려 대응</li>
-              </ul>
+              <p>(주)더바디채널 회원이 심박밴드 · Apple Watch · 갤럭시 워치를 착용하고 운동하면 심박 · 칼로리 · 경로를 측정하고, 그 기록을 피드 · 랭킹 · 출석 챌린지로 이어 주는 운동 앱입니다. 폰 앱 · 워치 앱 · 백엔드 개발을 맡았습니다.</p>
+            </div>
+
+            <div class="detail-block">
+              <h3>주요 구현 기능</h3>
+              <div class="feature-item"><span class="num">01</span><div><h4>워치 운동 측정 · 폰 동기화</h4><p>HKLiveWorkoutBuilder 로 심박 · 칼로리 · 거리를 시스템 측정값으로 받고, 폰 ↔ 워치는 매초 값 대신 기준 시각만 전송(진행 = applicationContext, 이벤트 = transferUserInfo, 좌표 = 버퍼)합니다. 앱이 종료돼도 진행 중 세션을 복구합니다.</p></div></div>
+              <div class="feature-item"><span class="num">02</span><div><h4>심박 기반 칼로리 · 측정 엔진</h4><p>칼로리를 Keytel(2005) 회귀식 구간 합산으로 교체(예: 70kg · 30세 · 심박 140 · 30분 171 → 약 381kcal), RunningEngine 을 순수 모듈로 분리하고 걸음 증거 기반 자동 일시정지를 녹화 트랙으로 검증했습니다.</p></div></div>
+              <div class="feature-item"><span class="num">03</span><div><h4>헬스 플랫폼 연동 · 백엔드 재설계</h4><p>HealthKit 경로 · 걸음 · 심박과 Samsung Health 심박 로그를 같은 필드로 통합하고, 새 DB 스키마 설계 · 데이터 이관, 랭킹 집계 배치, ERP 출결 기반 30일 출석 챌린지를 구현했습니다.</p></div></div>
+            </div>
+
+            <div class="detail-block">
+              <h3>기술적 도전 및 해결</h3>
+              <div class="challenge-item">
+                <h4>운동 1건이 7건으로 중복 저장</h4>
+                <p class="problem"><b>문제</b><span>업로드 순간의 <code>Date.now()</code> 로 시작 시각을 역산해 서버 중복 판정 키(회원 · 시작 시각 · 종목)가 매번 달라졌고, 149초 러닝 1건이 7건으로 저장됐습니다.</span></p>
+                <p class="solution"><b>해결</b><span>워치가 운동을 연 시각(<code>registTime</code>)을 키로 고정하고 클라이언트에도 2차 방어를 둔 뒤 중복 데이터를 정리했습니다.</span></p>
+              </div>
+              <div class="challenge-item">
+                <h4>야외 운동 경로가 통째로 사라짐</h4>
+                <p class="problem"><b>문제</b><span>위치 권한 요청이 백그라운드에서 무시되고, 연결이 끊긴 동안 쌓인 좌표가 진행 기록보다 먼저 도착하면 버려졌습니다.</span></p>
+                <p class="solution"><b>해결</b><span>권한을 화면이 앞에 있을 때 미리 요청하고, 소속 미정 좌표는 보류 후 연결(<code>holdOrphanRoute</code>), 기기에 기록된 경로를 복원(<code>restoreLiveRoute</code>)하도록 했습니다.</span></p>
+              </div>
+            </div>
+
+            <div class="detail-block">
+              <h3>프로젝트 성과</h3>
+              <ul class="result-list"><li>Jest 36 suites · 480 tests 통과, Wear OS JVM 테스트 39개 · 에뮬레이터 E2E 25개</li><li>회원 678명 · 운동 기록 2,669건을 새 스키마로 이관, 평문 비밀번호 1,081건 bcrypt 해시 전환</li></ul>
             </div>
           </div>
 
           <div class="col-lg-4">
-            <div class="portfolio-info">
+            <div class="portfolio-info side-card">
               <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: App (iOS · Android · watchOS · Wear OS)</li>
-                <li><strong>Project Name</strong>: FitSignal</li>
-                <li><strong>Company</strong>: (주)더바디채널</li>
-                <li><strong>Project date</strong>: 2026.08 - 진행중</li>
-                <li><strong>Role</strong>: 앱 · 백엔드 개발</li>
+              <ul class="info-list"><li><strong>Company</strong>(주)더바디채널</li><li><strong>Category</strong>App (iOS · Android · watchOS · Wear OS)</li><li><strong>Period</strong>2026.08 ~</li><li><strong>Role</strong>앱 · 워치 · 백엔드 개발</li></ul>
+            </div>
+            <div class="portfolio-info side-card">
+              <h3>지원 플랫폼</h3>
+              <ul class="platform-list">
+                <li><i class="bi bi-phone"></i><div><strong>iOS · Android</strong><span>React Native 단일 코드베이스 (크로스플랫폼)</span></div></li>
+                <li><i class="bi bi-apple"></i><div><strong>Apple Watch</strong><span>SwiftUI · HealthKit 워치 앱</span></div></li>
+                <li><i class="bi bi-smartwatch"></i><div><strong>Wear OS</strong><span>Kotlin 운동 서비스 · Samsung Health 연동</span></div></li>
               </ul>
             </div>
-            <div class="portfolio-info">
-              <h3>Tech Stack</h3>
-              <div class="tech-tags">
-                <span>React Native</span>
-                <span>JavaScript</span>
-                <span>Swift (HealthKit)</span>
-                <span>Kotlin (Wear OS)</span>
-                <span>WatchConnectivity</span>
-                <span>BLE (ble-plx)</span>
-                <span>Samsung Health</span>
-                <span>Kakao Map</span>
-                <span>Node.js (Koa)</span>
-                <span>MySQL</span>
-                <span>Firebase</span>
-              </div>
+            <div class="portfolio-info side-card">
+              <h3>핵심 기술 스택</h3>
+              <div class="tech-tags"><span>React Native 0.81</span><span>Swift (HealthKit · HKLiveWorkoutBuilder)</span><span>WatchConnectivity</span><span>Kotlin (Wear OS · Samsung Health SDK)</span><span>Node.js (Koa)</span><span>MySQL 8</span><span>Jest · Robolectric</span></div>
             </div>
           </div>
 
