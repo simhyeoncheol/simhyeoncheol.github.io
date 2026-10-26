@@ -270,10 +270,10 @@
                   <div class="career-project">
                     <h5>ERP · 결제 / 정산</h5>
                     <ul class="career-desc">
-                      <li>결제 정합성 개선 — 포트원 취소 실패 시 전산 환불 차단, 일괄결제 웹훅의 상품 미발급 · 매출 누락 수정, 미수금 · 인센티브 · 환불 차감 매출 반영 오류 수정</li>
-                      <li>승인 워크플로우 3종 설계 — 유효기간 변경 GM 승인(등록 전 실제 반영 로직으로 결제일 · 회원권 기간 · 락커 중복을 사전 검증 후 롤백), 레슨권 양도 승인, 0원 상품 결제 승인</li>
-                      <li>포인트 시스템 — 상품별 포인트 사용 여부(기초상품 기본값 + 지점별 설정), 회원앱 결제 한도, 그룹수업 출석 적립</li>
-                      <li>그룹수업 자동 복사 cron 안정화 — 수업 단위 판정, 휴강 · 예약 이력 보존, 중복 생성 방지</li>
+                      <li>포트원 결제 취소가 실패했는데 전산에서는 환불되던 문제, 일괄결제 웹훅에서 상품이 발급되지 않거나 매출이 빠지던 문제, 미수금·인센티브·환불 차감 매출이 반영되지 않던 문제 수정</li>
+                      <li>유효기간 변경 GM 승인, 레슨권 양도 승인, 0원 상품 결제 승인 기능 개발. 유효기간 변경은 요청을 등록하기 전에 실제 반영 로직을 한 번 돌려 결제일·회원권 기간·락커 중복을 확인하고 되돌림</li>
+                      <li>포인트 기능 개발: 상품별 포인트 사용 여부(기초상품 기본값, 지점별 설정), 회원앱 결제 한도, 그룹수업 출석 적립</li>
+                      <li>그룹수업 자동 복사 cron 수정: 수업 단위로 복사 여부를 판단하고, 휴강·예약 이력을 유지하며, 같은 수업이 두 번 만들어지지 않게 함</li>
                       <li>지점 공지 로그인 팝업 · 수신확인, '이달의 공동구매' 메뉴 · 댓글 API 및 회원 / 직원 앱 화면 개발</li>
                     </ul>
                   </div>
@@ -281,10 +281,10 @@
                     <h5>FitSignal 심박 운동 앱 (iOS · Android · Apple Watch · Wear OS)</h5>
                     <ul class="career-desc">
                       <li>Apple Watch HKLiveWorkoutBuilder 기반 워치 단독 측정 · 폰 동기화, 삼성헬스 · Galaxy Watch 심박 연동</li>
-                      <li>심박 기반 Keytel 칼로리 공식 적용, 시간 가중 평균 심박 계산, 실기기 없이 워치 연동을 검증하는 테스트 환경 구축</li>
+                      <li>심박 기반 Keytel 칼로리 공식 적용, 시간 가중 평균 심박 계산, 실기기 없이 워치 연동을 테스트할 수 있는 환경 구축</li>
                       <li>피드 · 스토리 · 팔로우 · 러닝 매칭 · 모임 · 랭킹 · 30일 출석 챌린지 · DM 등 소셜 기능 구현, 바디채널 계정 로그인 통합</li>
-                      <li>백엔드 DB 스키마 재설계 및 데이터 이관 — 동시 가입 시 id 충돌(max(id)+1 → AUTO_INCREMENT) 해결, 운동기록 bulk API · 랭킹 집계 배치 · ERP 출결 연동 챌린지 개발</li>
-                      <li>HTTP 에러 코드 정상화(모든 오류가 500 으로 응답되던 문제)로 인증 실패와 실제 장애 구분</li>
+                      <li>백엔드 DB 스키마를 새로 설계하고 데이터 이관. 동시에 가입하면 id가 겹치던 문제(max(id)+1 → AUTO_INCREMENT) 해결, 운동기록 일괄 업로드 API·랭킹 집계 배치·ERP 출결 연동 챌린지 개발</li>
+                      <li>모든 오류가 500으로 응답되던 것을 상황에 맞는 HTTP 에러 코드로 바꿔 인증 실패와 실제 장애를 구분</li>
                     </ul>
                   </div>
                   <div class="career-project">
@@ -596,7 +596,7 @@
               <img src="assets/img/portfolio/portfolio-chagok.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="assets/img/portfolio/portfolio-chagok.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="-차곡- 여러 기기에서 이어지는 공부 스톱워치 &amp; 집중 차단"><i class="bx bx-plus"></i></a>
+                  class="portfolio-lightbox" title="-차곡- 공부 스톱워치, 앱·사이트 차단"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details-chagok.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
@@ -687,11 +687,11 @@
               </h3>
             </div>
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-dashboard.png" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/portfolio-dashboard3.jpg" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-dashboard.png" data-gallery="portfolioGallery"
+                <a href="assets/img/portfolio/portfolio-dashboard3.jpg" data-gallery="portfolioGallery"
                   class="portfolio-lightbox" title="통계 대시보드"><i class="bx bx-plus"></i></a>
-                <!-- <a href="portfolio-details-Ivy.html" title="More Details"><i class="bx bx-link"></i></a> -->
+                <a href="portfolio-details-dashboard.html" title="More Details"><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>

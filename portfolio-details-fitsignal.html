@@ -85,23 +85,23 @@
         <div class="project-hero">
           <span class="project-kicker">(주)더바디채널 · App</span>
           <h1>FitSignal</h1>
-          <p class="project-hook">손목 위의 심박을 앱 · 서버 · 건강 앱 세 곳에 같은 운동 한 건으로 남긴다.</p>
+          <p class="project-hook">워치나 심박밴드로 운동 중 심박을 재고, 기록을 앱과 건강 앱에 저장하는 운동 앱입니다.</p>
           <div class="platform-chips"><span><i class="bi bi-phone"></i>iOS · Android</span><span><i class="bi bi-apple"></i>Apple Watch</span><span><i class="bi bi-smartwatch"></i>Wear OS</span></div>
         </div>
 
-        <div class="portfolio-details-slider swiper">
+        <div class="portfolio-details-slider swiper ">
           <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <a href="assets/img/portfolio/portfolio-fitsignal.jpg" class="portfolio-lightbox" data-gallery="fitsignal" title="FitSignal — 심박 기반 운동 기록 · 소셜 앱">
-                    <img src="assets/img/portfolio/portfolio-fitsignal.jpg" alt="FitSignal — 심박 기반 운동 기록 · 소셜 앱">
+                  <a href="assets/img/portfolio/portfolio-fitsignal.jpg" class="portfolio-lightbox" data-gallery="fitsignal" title="FitSignal · 심박 기반 운동 기록 앱">
+                    <img src="assets/img/portfolio/portfolio-fitsignal.jpg" alt="FitSignal · 심박 기반 운동 기록 앱">
                   </a>
-                  <p class="slide-caption">FitSignal — 심박 기반 운동 기록 · 소셜 앱</p>
+                  <p class="slide-caption">FitSignal · 심박 기반 운동 기록 앱</p>
                 </div>
                 <div class="swiper-slide">
-                  <a href="assets/img/portfolio/fitsignal/2.jpg" class="portfolio-lightbox" data-gallery="fitsignal" title="데이터 흐름 — 워치 → 폰 → 서버 · 건강 앱">
-                    <img src="assets/img/portfolio/fitsignal/2.jpg" alt="데이터 흐름 — 워치 → 폰 → 서버 · 건강 앱">
+                  <a href="assets/img/portfolio/fitsignal/2.jpg" class="portfolio-lightbox" data-gallery="fitsignal" title="데이터 흐름(워치 → 폰 → 서버, 건강 앱)">
+                    <img src="assets/img/portfolio/fitsignal/2.jpg" alt="데이터 흐름(워치 → 폰 → 서버, 건강 앱)">
                   </a>
-                  <p class="slide-caption">데이터 흐름 — 워치 → 폰 → 서버 · 건강 앱</p>
+                  <p class="slide-caption">데이터 흐름(워치 → 폰 → 서버, 건강 앱)</p>
                 </div>
           </div>
           <div class="swiper-pagination"></div>
@@ -112,47 +112,131 @@
           <div class="col-lg-8">
             <div class="detail-block">
               <h3>프로젝트 소개</h3>
-              <p>(주)더바디채널 회원이 심박밴드 · Apple Watch · 갤럭시 워치를 착용하고 운동하면 심박 · 칼로리 · 경로를 측정하고, 그 기록을 피드 · 랭킹 · 출석 챌린지로 이어 주는 운동 앱입니다. 폰 앱 · 워치 앱 · 백엔드 개발을 맡았습니다.</p>
+              <p>(주)더바디채널 회원이 심박밴드(BLE), Apple Watch, Galaxy Watch로 운동하면 심박·칼로리·경로를 측정하고, 기록을 피드·랭킹·출석 챌린지로 연결하는 운동 앱입니다. 폰 앱, 워치 앱(watchOS · Wear OS), 백엔드(Node.js · MySQL)를 담당했습니다.</p>
             </div>
 
             <div class="detail-block">
               <h3>주요 구현 기능</h3>
-              <div class="feature-item"><span class="num">01</span><div><h4>워치 운동 측정 · 폰 동기화</h4><p>HKLiveWorkoutBuilder 로 심박 · 칼로리 · 거리를 시스템 측정값으로 받고, 폰 ↔ 워치는 매초 값 대신 기준 시각만 전송(진행 = applicationContext, 이벤트 = transferUserInfo, 좌표 = 버퍼)합니다. 앱이 종료돼도 진행 중 세션을 복구합니다.</p></div></div>
-              <div class="feature-item"><span class="num">02</span><div><h4>심박 기반 칼로리 · 측정 엔진</h4><p>칼로리를 Keytel(2005) 회귀식 구간 합산으로 교체(예: 70kg · 30세 · 심박 140 · 30분 171 → 약 381kcal), RunningEngine 을 순수 모듈로 분리하고 걸음 증거 기반 자동 일시정지를 녹화 트랙으로 검증했습니다.</p></div></div>
-              <div class="feature-item"><span class="num">03</span><div><h4>헬스 플랫폼 연동 · 백엔드 재설계</h4><p>HealthKit 경로 · 걸음 · 심박과 Samsung Health 심박 로그를 같은 필드로 통합하고, 새 DB 스키마 설계 · 데이터 이관, 랭킹 집계 배치, ERP 출결 기반 30일 출석 챌린지를 구현했습니다.</p></div></div>
+              <div class="feature-item"><span class="num">01</span><div><h4>워치 측정과 폰 동기화</h4><p>HKLiveWorkoutBuilder로 심박·칼로리·거리를 시스템 측정값으로 받고, 폰 ↔ 워치는 매초 값 대신 기준 시각만 전송합니다(상태는 applicationContext, 이벤트는 transferUserInfo, 좌표는 배치 전송). 앱 프로세스가 종료돼도 진행 중 세션을 복구합니다.</p></div></div>
+              <div class="feature-item"><span class="num">02</span><div><h4>심박 기반 칼로리와 측정 엔진</h4><p>칼로리를 Keytel(2005) 심박 회귀식 구간 적산으로 교체했습니다(예: 70kg · 30세 · 심박 140 · 30분 171 → 약 381kcal). RunningEngine을 순수 모듈로 분리하고, 걸음 신호 기반 자동 일시정지를 녹화 트랙 리플레이로 검증했습니다.</p></div></div>
+              <div class="feature-item"><span class="num">03</span><div><h4>헬스 플랫폼 통합과 백엔드 재설계</h4><p>HealthKit(경로·걸음·심박)과 Samsung Health Data SDK(심박 로그)를 공통 스키마로 정규화했습니다. 신규 DB 스키마 설계와 데이터 마이그레이션, 랭킹 증분 집계 배치, ERP 출결 기반 30일 출석 챌린지(보상 이중 지급 방지)를 구현했습니다.</p></div></div>
             </div>
 
-            <div class="detail-block">
-              <h3>기술적 도전 및 해결</h3>
-              <div class="challenge-item">
-                <h4>운동 1건이 7건으로 중복 저장</h4>
-                <p class="problem"><b>문제</b><span>업로드 순간의 <code>Date.now()</code> 로 시작 시각을 역산해 서버 중복 판정 키(회원 · 시작 시각 · 종목)가 매번 달라졌고, 149초 러닝 1건이 7건으로 저장됐습니다.</span></p>
-                <p class="solution"><b>해결</b><span>워치가 운동을 연 시각(<code>registTime</code>)을 키로 고정하고 클라이언트에도 2차 방어를 둔 뒤 중복 데이터를 정리했습니다.</span></p>
-              </div>
-              <div class="challenge-item">
-                <h4>야외 운동 경로가 통째로 사라짐</h4>
-                <p class="problem"><b>문제</b><span>위치 권한 요청이 백그라운드에서 무시되고, 연결이 끊긴 동안 쌓인 좌표가 진행 기록보다 먼저 도착하면 버려졌습니다.</span></p>
-                <p class="solution"><b>해결</b><span>권한을 화면이 앞에 있을 때 미리 요청하고, 소속 미정 좌표는 보류 후 연결(<code>holdOrphanRoute</code>), 기기에 기록된 경로를 복원(<code>restoreLiveRoute</code>)하도록 했습니다.</span></p>
-              </div>
-            </div>
 
             <div class="detail-block">
-              <h3>프로젝트 성과</h3>
-              <ul class="result-list"><li>Jest 36 suites · 480 tests 통과, Wear OS JVM 테스트 39개 · 에뮬레이터 E2E 25개</li><li>회원 678명 · 운동 기록 2,669건을 새 스키마로 이관, 평문 비밀번호 1,081건 bcrypt 해시 전환</li></ul>
+              <h3>개선 전후 지표</h3>
+              <div class="metric-grid">
+                <div class="metric"><span class="label">DB 보조 인덱스</span><span class="before">0개</span><i class="bi bi-arrow-right"></i><span class="after">37개</span></div>
+                <div class="metric"><span class="label">평문 비밀번호</span><span class="before">1,081건</span><i class="bi bi-arrow-right"></i><span class="after">bcrypt 해시</span></div>
+                <div class="metric"><span class="label">칼로리 (70kg · 심박 140 · 30분)</span><span class="before">171 kcal</span><i class="bi bi-arrow-right"></i><span class="after">약 381 kcal</span></div>
+                <div class="metric"><span class="label">GPS 거리 오차 (990.6m 코스)</span><span class="before">-56%</span><i class="bi bi-arrow-right"></i><span class="after">-7.1%</span></div>
+                <div class="metric"><span class="label">구간 기록 vs Apple 피트니스</span><span class="before">수 초 오차</span><i class="bi bi-arrow-right"></i><span class="after">전 구간 일치</span></div>
+              </div>
             </div>
+            <div class="detail-block">
+              <h3>개선 과정</h3>
+              <ol class="evo-list">
+                <li><span class="when">2026.08 중</span><div><h4>기존 앱 인수</h4><p>RN 0.81 기반의 기존 앱·워치 앱·Koa 백엔드를 이어받아 신규 UI 시안 이전과 HealthKit · Samsung Health 연동부터 시작했습니다.</p></div></li>
+                <li><span class="when">2026.08 말</span><div><h4>데이터 계층 재설계</h4><p>실제 데이터를 근거로 스키마를 새로 설계하고 이관했습니다. 회원은 바디채널 회원 원본을 가리키는 위성 구조로 바꾸고, DB 드라이버를 mysql2 커넥션 풀로 교체했으며, 로그인·가입을 바디채널 계정으로 통합했습니다.</p></div></li>
+                <li><span class="when">2026.09 초</span><div><h4>서비스 기능</h4><p>랭킹 집계 배치와 API, ERP 출결 기반 30일 출석 챌린지, 게시글 단위 지도 비공개 정책을 구현했습니다.</p></div></li>
+                <li><span class="when">2026.09 말</span><div><h4>워치 측정 재구축</h4><p>Apple Watch 측정을 HKWorkoutSession + HKLiveWorkoutBuilder로 옮겨 시스템 측정값을 쓰고, 폰 ↔ 워치를 기준 시각 동기화로 바꿨으며, 앱 종료 후 세션 복구를 넣었습니다.</p></div></li>
+                <li><span class="when">2026.10 중</span><div><h4>검증 체계와 정확도</h4><p>실기기 없이 워치 연동을 검증하는 환경, GPX 리플레이, 자동 일시정지, 시간 가중 심박 평균, Keytel 칼로리 식을 적용했습니다.</p></div></li>
+                <li><span class="when">2026.10 말</span><div><h4>마무리</h4><p>새 시안으로 화면을 재구성하고 DM과 신고·차단 기능을 붙였습니다.</p></div></li>
+              </ol>
+            </div>
+            <div class="detail-block">
+              <h3>기존 구조와 개선</h3>
+              <div class="ba-table">
+                <div class="ba-row ba-head"><span>항목</span><span>기존</span><span>개선</span></div>
+                <div class="ba-row"><span class="ba-key">인덱스</span><span class="ba-before">보조 인덱스 0개, 4개 테이블은 PK 없음. 내 기록 조회 시 4,804행 풀스캔</span><span class="ba-after">보조 인덱스 37개</span></div>
+                <div class="ba-row"><span class="ba-key">ID 발급</span><span class="ba-before"><code>max(id)+1</code> (동시 가입 시 같은 id 발급)</span><span class="ba-after"><code>AUTO_INCREMENT</code></span></div>
+                <div class="ba-row"><span class="ba-key">비밀번호</span><span class="ba-before">평문 저장 (4~30자)</span><span class="ba-after">이관 시 1,081건 bcrypt 해시 전환</span></div>
+                <div class="ba-row"><span class="ba-key">팔로우</span><span class="ba-before">Follow / Follower 양방향 중복 저장, 팔로우 1회에 쿼리 4개</span><span class="ba-after">단일 <code>follow</code> 테이블</span></div>
+                <div class="ba-row"><span class="ba-key">다중 값 컬럼</span><span class="ba-before"><code>branchList</code> "[],2" 문자열, 사진 경로 "%&" 이어붙임</span><span class="ba-after"><code>member_branch</code>, <code>feed_image</code>로 정규화</span></div>
+                <div class="ba-row"><span class="ba-key">회원 데이터</span><span class="ba-before">이름·전화·비밀번호를 서비스 DB에 복제</span><span class="ba-after">바디채널 회원 원본(SSOT) + 서비스 전용 위성 테이블</span></div>
+                <div class="ba-row"><span class="ba-key">DB 연결</span><span class="ba-before">mysql@2 단일 연결, MySQL 8 인증 미지원</span><span class="ba-after">mysql2 커넥션 풀 + 파라미터 바인딩</span></div>
+                <div class="ba-row"><span class="ba-key">운동 기록 보관</span><span class="ba-before">목록을 열 때마다 기기에서 다시 읽음 (기기 변경 시 지난 기록 조회 불가)</span><span class="ba-after">서버 <code>health_workout</code> 독립 테이블, 플랫폼 고유 id + 2중 UNIQUE로 중복 차단</span></div>
+                <div class="ba-row"><span class="ba-key">칼로리</span><span class="ba-before"><code>met = 3.5 × 심박 / 100</code> (출처 없는 간이식), 일부 화면이 kcal을 1/100 단위로 오인</span><span class="ba-after">Keytel(2005) 심박 회귀식 구간 적산, 단위 정리</span></div>
+                <div class="ba-row"><span class="ba-key">워치 측정</span><span class="ba-before">앱에서 지표를 자체 추정</span><span class="ba-after">HKLiveWorkoutBuilder 시스템 측정값, 종목별 <code>activityType</code> 지정</span></div>
+                <div class="ba-row"><span class="ba-key">랭킹</span><span class="ba-before">요청마다 원본 풀스캔</span><span class="ba-after"><code>ranking_monthly</code> 파생 테이블 + MySQL EVENT 증분 집계</span></div>
+              </div>
+            </div>
+            <div class="detail-block"><h3>기술적 과제와 해결</h3>
+              <div class="challenge-item">
+                <h4>Apple 피트니스와 동일한 구간(split) 기록</h4>
+                <p class="problem"><b>과제</b><span>사용자가 Apple 피트니스와 기록을 비교하기 때문에 1km 구간 기록을 초 단위까지 일치시켜야 했습니다.</span></p>
+                <p class="before"><b>기존</b><span>좌표로 구간을 직접 계산했고, HealthKit의 <code>workoutEvents</code>만 읽어 iOS 17 이후 일시정지가 0건으로 집계됐습니다. 시각은 초 단위로 절삭해 전달했습니다.</span></p>
+                <p class="cause"><b>분석</b><span>좌표 기반 자체 계산은 Apple 결과와 구간마다 수 초씩 오차가 있어, HealthKit이 제공하는 <code>.segment</code> 이벤트를 원본으로 쓰기로 했습니다. 다만 iOS 17부터 일시정지 이벤트가 <code>workoutActivities</code> 쪽에 붙고, km·마일 segment가 구분 없이 섞여 오며, 초 단위로 절삭하면 구간마다 최대 1초 오차가 누적됩니다.</span></p>
+                <p class="solution"><b>해결</b><span>iOS 17 activity 이벤트와 activity 사이 간격까지 수집해 밀리초 ISO 문자열로 브리지에 넘기고, 구간 경계가 이어지는 체인(허용 오차 3초)을 구성해 총거리에 맞는 체인(km)을 선택합니다. 일시정지 구간을 차감하고 반올림 전 값으로 페이스를 계산하며, segment가 없는 기록은 거리 샘플 → 좌표 순으로 fallback합니다.</span></p>
+                <p class="result"><b>성과</b><span>실기기 5km 러닝에서 6:10 / 6:26 / 6:57 / 7:00 / 8:06 / 8:15로 Apple과 전 구간 일치했습니다.</span></p>
+              </div>
+              <div class="challenge-item">
+                <h4>GPX 리플레이 기반 거리 측정 정확도 개선</h4>
+                <p class="problem"><b>과제</b><span>실외 테스트를 반복할 수 없어 실제 코스 좌표를 에뮬레이터에 재생(<code>adb emu geo fix</code>)하는 재현 환경을 먼저 구축했습니다.</span></p>
+                <p class="before"><b>기존</b><span>거리 계산이 벽시계(<code>Location.time</code>) 기준이었고, 4초 이상 좌표 공백을 모두 신호 손실로 보고 세그먼트를 끊었습니다. 실외 측정을 재현할 환경이 없었습니다.</span></p>
+                <p class="cause"><b>분석</b><span>990.6m 코스가 440m(-56%)로 측정됐고 원인이 세 가지 겹쳐 있었습니다. <code>Location.time</code>은 벽시계라 정지·역행 시 <code>dt &lt;= 0</code>으로 거리가 누락되고, 세그먼트를 새로 열 때 미확정 거리를 폐기했으며, Fused Provider가 1초 요청에도 2~5초 간격으로 응답하는데 4초 초과 간격을 일괄 신호 손실로 처리했습니다.</span></p>
+                <p class="solution"><b>해결</b><span>시간 기준을 단조 시계(<code>elapsedRealtimeNanos</code>)로 바꾸고, 세그먼트 분할 전에 대기 거리를 커밋(<code>_commitPending</code>)하도록 했습니다. 30초 이내 공백은 속도 검증 후 브리징하고 브리징 시간은 별도 집계하며, 종목별 속도 임계값을 적용했습니다. 리플레이 스크립트와 ndjson 픽스처 6종(터널 60초, 5분 정지 등)으로 원인을 분리했습니다.</span></p>
+                <p class="result"><b>성과</b><span>오차 -56% → -7.1%(920m), 세그먼트 17 → 3. 에뮬레이터 좌표 기준이며 실외 필드 테스트는 진행할 예정입니다.</span></p>
+              </div>
+              <div class="challenge-item">
+                <h4>사내 회원 시스템과의 계정 통합</h4>
+                <p class="problem"><b>과제</b><span>FitSignal 계정을 바디채널 회원 시스템으로 통합해야 했습니다.</span></p>
+                <p class="before"><b>기존</b><span>이름·전화·비밀번호를 서비스 DB에 복제했고, 비밀번호는 평문이었습니다. DB 계층은 mysql@2 단일 연결이라 연결이 끊기면 서버는 살아 있는 채로 모든 쿼리가 실패했습니다.</span></p>
+                <p class="cause"><b>분석</b><span>회원 정보를 복제하면 원본과 사본의 정합성 문제가 생기고 비밀번호도 이중 관리됩니다. 원본 회원 DB에는 쓰기 권한이 없었고, 회원 API 명세도 없었습니다. 기존 드라이버(mysql@2)는 MySQL 8 기본 인증 플러그인(<code>caching_sha2_password</code>)을 지원하지 않았습니다.</span></p>
+                <p class="solution"><b>해결</b><span>회원 원본을 단일 원천(SSOT)으로 두고 FitSignal에는 회원 키와 서비스 전용 속성만 가진 위성 테이블을 두어, 조회 시 원본 우선으로 병합(COALESCE)합니다. 회원앱 웹 번들 JS 72개를 역분석해 약관·인증번호·중복 확인·가입 API를 문서화하고 연동했습니다. DB 계층은 mysql2 커넥션 풀과 prepared statement로 교체하고, 응답 키는 SQL alias로 유지해 클라이언트 변경 없이 스키마를 전환했습니다.</span></p>
+                <p class="result"><b>성과</b><span>API 흐름 테스트 72개, 예외 테스트 43개 실패 0건.</span></p>
+              </div>
+              <div class="challenge-item">
+                <h4>워치 가용성 판정 로직</h4>
+                <p class="problem"><b>과제</b><span>실내 운동은 심박 측정 기기가 필수라 세션 시작 전에 워치 사용 가능 여부를 판정해야 했습니다.</span></p>
+                <p class="cause"><b>분석</b><span><code>isReachable</code>은 워치 전원 상태가 아니라 워치 앱의 foreground 여부를 의미하고, 워치가 꺼져도 <code>isPaired</code>·<code>isWatchAppInstalled</code>는 true로 남아 상태를 구분할 수 없었습니다. 진단이 불확실한 값으로 기능을 막으면 UI 판정과 실제 시작 경로가 어긋납니다.</span></p>
+                <p class="solution"><b>해결</b><span>확정 가능한 조건(미페어링, 앱 미설치)만 사전 차단하고, 나머지는 <code>HKHealthStore.startWatchApp</code>으로 실제 기동을 시도한 뒤 9초 타임아웃 시 실외는 폰 GPS로 fallback, 실내는 안내 후 중단합니다. UI 잠금과 시작 경로가 같은 판정 함수를 공유하게 했습니다.</span></p>
+                <p class="result"><b>성과</b><span><code>watchReadiness.test.js</code>로 판정 규칙을 회귀 테스트화했습니다.</span></p>
+              </div>
+              <div class="challenge-item">
+                <h4>불규칙 샘플링 심박 데이터의 통계 정합성</h4>
+                <p class="problem"><b>과제</b><span>심박밴드(BLE), Apple Watch, Galaxy Watch의 심박으로 평균 심박과 존별 체류 시간을 제공해야 했습니다.</span></p>
+                <p class="before"><b>기존</b><span>평균 심박은 산술평균, 존 체류는 측정 횟수로 집계했고 컬럼명만 <code>hr_zone_*_sec</code>였습니다. 끊긴 구간은 30초까지만 세어 존 합계가 운동 시간보다 6분 짧았습니다.</span></p>
+                <p class="cause"><b>분석</b><span>BLE notify 간격이 불규칙(2초에 4회 → 40초 공백)해 산술평균은 샘플 밀도가 높은 구간에 편향됩니다. 존 체류를 샘플 수로 집계하면 시간으로 환산할 수 없고, 기존 데이터(횟수 기반)와 하위 호환도 유지해야 했습니다.</span></p>
+                <p class="solution"><b>해결</b><span>각 샘플이 다음 샘플까지를 대표하는 시간 가중 평균(샘플당 상한 600초)으로 바꾸고, 20초가 지난 값은 stale로 처리해 표시하지 않습니다. 존은 실제 초 단위로 적산하고, 비율의 분모를 존 합계로 바꿔 구·신 데이터가 섞여도 비율이 일관되게 했습니다.</span></p>
+                <p class="result"><b>성과</b><span><code>heartRateStats.test.js</code> 작성, 당시 Jest 383 tests 통과.</span></p>
+              </div>
+              <div class="challenge-item">
+                <h4>랭킹 증분 집계 배치와 순위 정합성</h4>
+                <p class="problem"><b>과제</b><span>월별 랭킹을 지표 5종으로 제공하고, 상위권 밖 사용자에게도 본인 순위를 보여 줘야 했습니다.</span></p>
+                <p class="before"><b>기존</b><span>랭킹 요청마다 원본 테이블을 풀스캔했고, 화면에서 지표 칩 5개를 넘기면 같은 집계가 5번 실행됐습니다.</span></p>
+                <p class="cause"><b>분석</b><span>요청마다 원본 테이블을 풀스캔하는 구조였고, 정수로 저장된 집계값과 원본 실시간 값을 섞어 비교하면 반올림 차이(158.6 → 159)로 순위가 어긋납니다. 배치가 멈춰도 감지할 수단이 없었습니다.</span></p>
+                <p class="solution"><b>해결</b><span>파생 테이블 <code>ranking_monthly</code>를 두고 MySQL EVENT로 5분 증분 집계와 매일 04시 전체 재계산을 돌립니다. 회원·월 단위로 DELETE 후 재생성해 수정·삭제를 반영하고, <code>ranking_rollup_log</code>로 실행 여부와 처리 건수를 기록합니다. 본인 순위는 원본 기준으로 계산하되 본인 집계 행은 비교 대상에서 제외하고, 클라이언트는 마감 월 무기한·당월 60초 TTL로 캐싱하며 업로드 시 캐시를 무효화합니다.</span></p>
+                <p class="result"><b>성과</b><span>목록과 본인 순위 카드 간 불일치를 해소했습니다.</span></p>
+              </div>
+              <div class="challenge-item">
+                <h4>경로 비공개 정책과 위치 메타데이터 보호</h4>
+                <p class="problem"><b>과제</b><span>운동 경로는 거주지와 생활 반경을 드러낼 수 있어 게시글 단위로 지도 비공개를 지원했습니다.</span></p>
+                <p class="cause"><b>분석</b><span>하나의 운동을 여러 게시글에 연결하고 일부만 비공개로 설정할 수 있어, 운동 단위로는 접근 제어를 판정할 수 없습니다. 좌표를 마스킹해도 고도·타임스탬프가 남으면 지형 대조로 경로를 추정하거나 활동 시간대를 알 수 있습니다.</span></p>
+                <p class="solution"><b>해결</b><span>공개 여부는 조회 중인 게시글 컨텍스트(feedId)로 판정하고, 컨텍스트가 없으면 연결된 공개 게시글이 모두 비공개일 때 마스킹합니다(<code>MIN(map_private)</code>). 마스킹 시 타임스탬프·고도·정확도와 시작 지점명을 제거하고, 목록 API에도 동일한 공개 범위 조건을 적용했습니다.</span></p>
+              </div>
+              <div class="challenge-item">
+                <h4>비신뢰 채널 위의 세션 종료 프로토콜</h4>
+                <p class="problem"><b>과제</b><span>워치에서 종료한 운동이 폰 UI와 서버에 확실히 반영돼야 했습니다.</span></p>
+                <p class="cause"><b>분석</b><span><code>sendMessage</code>는 수신 측이 reachable일 때만 전달되는 비보장 채널이고, 업로드 실패와 무관하게 UI 상태는 종료돼야 합니다. Wear OS에서는 <code>onDestroy</code>에서 종료 코루틴이 두 디스패처로 중복 실행돼 서로 cancel되면서 운동 세션이 시스템에 남을 수 있었습니다.</span></p>
+                <p class="solution"><b>해결</b><span>종료 명령은 워치의 ACK까지 재전송하고, 저장과 종료 신호를 분리했습니다. 상태 정리는 <code>finally</code>로 옮겨 업로드 결과와 무관하게 실행되게 했고, Wear OS 종료 작업은 단일 launch로 바꿨습니다. 폰과 워치가 최소 운동 시간 기준 상수를 공유하게 했습니다.</span></p>
+                <p class="result"><b>성과</b><span>종료 재전송 로직을 <code>sendStopWorkout.test.js</code>로 테스트했습니다.</span></p>
+              </div></div>
+
+            <div class="detail-block"><h3>프로젝트 성과</h3><ul class="result-list"><li>Jest 테스트 480개(36개 파일) 통과, Wear OS JVM 테스트 39개, 에뮬레이터 E2E 테스트 25개</li><li>회원 678명 · 운동 기록 2,669건 스키마 마이그레이션, 평문 비밀번호 1,081건 bcrypt 해시 전환</li></ul></div>
           </div>
 
           <div class="col-lg-4">
             <div class="portfolio-info side-card">
               <h3>Project information</h3>
-              <ul class="info-list"><li><strong>Company</strong>(주)더바디채널</li><li><strong>Category</strong>App (iOS · Android · watchOS · Wear OS)</li><li><strong>Period</strong>2026.08 ~</li><li><strong>Role</strong>앱 · 워치 · 백엔드 개발</li></ul>
+              <ul class="info-list"><li><strong>Company</strong>(주)더바디채널</li><li><strong>Category</strong>App (iOS · Android · watchOS · Wear OS)</li><li><strong>Period</strong>2026.08 ~ 2026.10</li><li><strong>Role</strong>앱 · 워치 · 백엔드 개발</li></ul>
             </div>
             <div class="portfolio-info side-card">
               <h3>지원 플랫폼</h3>
               <ul class="platform-list">
-                <li><i class="bi bi-phone"></i><div><strong>iOS · Android</strong><span>React Native 단일 코드베이스 (크로스플랫폼)</span></div></li>
-                <li><i class="bi bi-apple"></i><div><strong>Apple Watch</strong><span>SwiftUI · HealthKit 워치 앱</span></div></li>
-                <li><i class="bi bi-smartwatch"></i><div><strong>Wear OS</strong><span>Kotlin 운동 서비스 · Samsung Health 연동</span></div></li>
+                <li><i class="bi bi-phone"></i><div><strong>iOS · Android</strong><span>React Native (크로스플랫폼)</span></div></li>
+                <li><i class="bi bi-apple"></i><div><strong>Apple Watch</strong><span>SwiftUI, HealthKit</span></div></li>
+                <li><i class="bi bi-smartwatch"></i><div><strong>Wear OS</strong><span>Kotlin, Samsung Health 연동</span></div></li>
               </ul>
             </div>
             <div class="portfolio-info side-card">
