@@ -1,924 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>안녕하세요 심현철입니다.</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: iPortfolio
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5f5f2">
+  <meta name="description" content="심현철 소프트웨어 엔지니어 포트폴리오 — React, Spring, 모바일·웨어러블 개발 및 운영 경험과 프로젝트 기록.">
+  <meta property="og:title" content="심현철 | Software Engineer">
+  <meta property="og:description" content="웹, 서버, 모바일과 웨어러블. 실제 프로젝트와 문제 해결 경험을 기록합니다.">
+  <title>심현철 | Software Engineer</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
 </head>
-
 <body>
-
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Sim Hyeon Cheol</a></h1>
-        <div class="social-links mt-3 text-center">
-          <!--     <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About Me</span></a></li>
-          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Skills</span></a>
-          </li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i>
-              <span>Portfolio</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <header class="site-header" id="top">
+    <div class="shell header-content">
+      <a href="#top" class="brand" aria-label="심현철 포트폴리오 처음으로"><span class="brand-mark">SHC<span class="brand-dot">.</span></span><span class="brand-caption">SIM HYEON CHEOL</span></a>
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <a href="#projects">Projects <span>01</span></a>
+        <a href="#expertise">Expertise <span>02</span></a>
+        <a href="#experience">Experience <span>03</span></a>
+        <a href="#about">About <span>04</span></a>
+      </nav>
+      <div class="header-actions"><button class="search-trigger" type="button" aria-label="프로젝트 빠른 검색 열기" aria-haspopup="dialog" aria-controls="command-dialog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.25"></circle><path d="m15.5 15.5 5 5"></path></svg><span>Search</span><kbd>⌘ K</kbd></button><a class="github-link" href="https://github.com/simhyeoncheol" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+      <button class="menu-button" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="메뉴 열기"><span></span><span></span></button>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Sim Hyeon Cheol</h1>
-      <p>I'm <span class="typed" data-typed-items="Challenging developer, Always improving student"></span></p>
-    </div>
-  </section><!-- End Hero -->
-
+    <nav class="mobile-nav" id="mobile-nav" aria-label="모바일 메뉴" hidden><a href="#projects">Projects</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#about">About</a><a href="https://github.com/simhyeoncheol" target="_blank" rel="noopener noreferrer">GitHub ↗</a><button type="button" data-open-search>프로젝트 검색 ⌕</button></nav>
+  </header>
   <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>About Me</h2>
+    <section class="hero shell" id="intro" aria-labelledby="hero-name">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-line"></span>SOFTWARE ENGINEER <span class="eyebrow-slash">/</span> PORTFOLIO 2026</div>
+          <h1 id="hero-name">심현철<span class="name-dot">.</span></h1>
+          <p class="name-en">Sim Hyeon Cheol</p>
+          <h2 class="hero-thought">웹, 서버, 앱을 오가며<br>실서비스를 개발합니다<span class="thought-period">.</span></h2>
+          <p class="hero-desc">React 화면부터 Spring 기반 업무 시스템, iOS·Android 앱과 Apple Watch 연동까지. 신규 기능을 만들고 운영 중 발견한 문제를 해결해 왔습니다.</p>
+          <div class="hero-inline-links"><a href="#projects" class="text-link">프로젝트 보기 <span aria-hidden="true">↘</span></a><a href="mailto:simhyeoncheol3@gmail.com" class="quiet-link">이메일 <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-signature"><span class="small-square"></span>웹 · 앱 개발자 · 전 (주)더바디채널 (2026.08 ~ 2026.11)</div>
         </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>도전을 두려워하지 않는 개발자 심현철입니다.</h3>
-            <p class="about-now">
-              <i class="bi bi-briefcase"></i>
-              <strong>(주)더바디채널</strong> 운동컨텐츠연구개발팀 대리 · <strong>웹 · 앱 개발자</strong>로 재직중
-            </p>
-            <div class="mb-4">
-              <p class="mb-1">문제에 대한 적극적인 해결 과정을 통해 항상 발전하고자 노력하며,</p>
-              <p class="mb-1">새로운 기술에 대해 열린 마음을 갖고 공부하고 있습니다.</p>
-              <p class="mb-1">팀원들과의 협업을 통해 창의적인 솔루션을 찾고,</p>
-              <p class="mb-1">열정과 끊임 없는 도전으로 회사의 발전에 또한 기여하고자 합니다.</p>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>25</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>11 Feb 2001 </span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>010 3627 7443</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Company:</strong> <span>(주)더바디채널</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>인천광역시 남동구</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>simhyeoncheol3@gmail.com</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <figure class="hero-portrait" aria-label="프로필 사진">
+          <div class="portrait-back"><span class="portrait-fallback" aria-hidden="true">SHC</span><img src="assets/img/profile-img.jpg" data-original-image="assets/img/profile-img.jpg" alt="개발자 심현철의 프로필 사진" width="750" height="1000" fetchpriority="high"></div>
+          <figcaption><span>01 / PROFILE</span><span>SIM HYEON CHEOL <span class="tiny-arrow">↗</span></span></figcaption>
+        </figure>
       </div>
-    </section><!-- End About Section -->
+      <div class="hero-bottom"><span>REACT / NEXT.JS</span><span>JAVA / SPRING</span><span>SWIFT / REACT NATIVE</span><a href="#projects" aria-label="프로젝트 섹션으로 이동">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+    </section>
 
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Skills</h2>
+    <section class="section-work" id="projects" aria-labelledby="projects-title">
+      <div class="shell">
+        <div class="section-head"><div><div class="section-index"><span>01</span><i></i> SELECTED PROJECTS</div><h2 id="projects-title">만든 것들<span class="title-dot">.</span></h2><p>공개 가능한 프로젝트의 실제 화면과 작업 내용을 함께 정리했습니다.</p></div><div class="project-filters" role="group" aria-label="프로젝트 종류 필터"><button class="active" data-filter="all" aria-pressed="true">All <small>10</small></button><button data-filter="app" aria-pressed="false">App <small>04</small></button><button data-filter="web" aria-pressed="false">Web <small>07</small></button></div></div>
+        <div class="project-grid" id="project-grid">
+          <article class="project-card project-large" id="project-fitsignal" data-type="app" data-keywords="fitsignal 핏시그널 심박 워치 운동 소셜 React Native Swift HealthKit Wear OS">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-fitsignal.jpg" data-title="FitSignal" aria-label="FitSignal 프로젝트 이미지 크게 보기"><span class="image-placeholder image-fitsignal" aria-hidden="true"><b>fit signal</b><span>HEART RATE · WORKOUT</span></span><img src="assets/img/portfolio/portfolio-fitsignal.jpg" alt="FitSignal 앱의 운동 기록과 심박 분석 화면" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button>
+            <div class="project-body"><div><div class="project-meta"><span>01 / FEATURED</span><span>APP · WEARABLE</span></div><h3><a href="portfolio-details-fitsignal.html">FitSignal <span aria-hidden="true">↗</span></a></h3><p>심박 기반 운동 기록, Apple Watch 및 Galaxy Watch 연동, 러닝·소셜 기능까지.</p></div><div class="project-tags"><span>React Native</span><span>Swift</span><span>HealthKit</span></div></div>
+          </article>
+          <article class="project-card project-medium" id="project-dalnim" data-type="app" data-keywords="달님 dalnim 러닝 운동 기록 ios watchos Swift">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-dalnim2.jpg" data-title="달님 (Dalnim)" aria-label="달님 프로젝트 이미지 크게 보기"><span class="image-placeholder image-dalnim" aria-hidden="true"><b>달님</b><span>RUN BEYOND</span></span><img src="assets/img/portfolio/portfolio-dalnim2.jpg" alt="달님 앱의 러닝 시작과 운동 기록 화면" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button>
+            <div class="project-body"><div><div class="project-meta"><span>02 / PERSONAL</span><span>iOS · WATCH</span></div><h3><a href="portfolio-details-dalnim.html">달님 <span aria-hidden="true">↗</span></a></h3><p>iPhone과 Apple Watch로 기록하고 친구와 함께 공유하는 운동 앱.</p></div><div class="project-tags"><span>iOS</span><span>watchOS</span></div></div>
+          </article>
+          <article class="project-card project-large" id="project-pacs" data-type="web" data-keywords="영상의학 pacs ocs emr 병원 판독 cvr 워크리스트 mssql oracle 프로시저 트리거 이원헬스케어">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-pacs.jpg" data-title="영상의학 · PACS 연동" aria-label="영상의학 · PACS 연동 프로젝트 이미지 크게 보기"><span class="image-placeholder image-pacs" aria-hidden="true"><b>OCS ↔ PACS</b><span>RADIOLOGY</span></span><img src="assets/img/portfolio/portfolio-pacs.jpg" alt="OCS와 PACS 사이 처방 · 판독결과 · 워크리스트 · 큐 데이터 흐름" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button>
+            <div class="project-body"><div><div class="project-meta"><span>03 / PROFESSIONAL</span><span>OCS · PACS</span></div><h3><a href="portfolio-details-pacs.html">영상의학 · PACS 연동 <span aria-hidden="true">↗</span></a></h3><p>병원 28곳의 PACS 관련 요청 100건 처리. 판독결과 누락과 상태 불일치를 연동 테이블 단계별로 추적해 해결했습니다.</p></div><div class="project-tags"><span>MSSQL</span><span>Oracle</span><span>Procedure · Trigger</span></div></div>
+          </article>
+          <article class="project-card project-medium" id="project-dashboard" data-type="web" data-keywords="병원 통계 대시보드 healthcare dashboard React Chart 병원 운영">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-dashboard3.jpg" data-title="통계 대시보드" aria-label="통계 대시보드 프로젝트 이미지 크게 보기"><span class="image-placeholder image-dashboard" aria-hidden="true"><b>Data Dashboard</b><span>HEALTHCARE</span></span><img src="assets/img/portfolio/portfolio-dashboard3.jpg" alt="병원 통계 대시보드의 차트와 필터 화면" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button><div class="project-body"><div class="project-meta"><span>04 / PROFESSIONAL</span><span>WEB · DATA</span></div><h3><a href="portfolio-details-dashboard.html">통계 대시보드 <span aria-hidden="true">↗</span></a></h3><p>운영 데이터를 조회하고 차트로 확인하는 병원 내부 시스템.</p><div class="project-tags"><span>Dashboard</span><span>Data</span></div></div>
+          </article>
+          <article class="project-card project-third" id="project-chagok" data-type="app web" data-keywords="차곡 chagok 공부 스톱워치 집중 차단 web mac windows android ios">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-chagok.jpg" data-title="차곡 (Chagok)" aria-label="차곡 프로젝트 이미지 크게 보기"><span class="image-placeholder image-chagok" aria-hidden="true"><b>차곡</b><span>FOCUS &amp; STUDY</span></span><img src="assets/img/portfolio/portfolio-chagok.jpg" alt="차곡 공부 스톱워치와 웹사이트 차단 기능 화면" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button><div class="project-body"><div class="project-meta"><span>05 / PERSONAL</span><span>APP · WEB</span></div><h3><a href="portfolio-details-chagok.html">차곡 <span aria-hidden="true">↗</span></a></h3><p>여러 기기에서 공부 시간을 기록하고 방해 요소를 차단하는 서비스.</p><div class="project-tags"><span>Multi-platform</span><span>Web</span></div></div>
+          </article>
+          <article class="project-card project-third" id="project-dday" data-type="app" data-keywords="디데이 dday macOS SwiftUI widget calendar 캘린더 위젯">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-dday.jpg" data-title="디데이 (DDay)" aria-label="디데이 프로젝트 이미지 크게 보기"><span class="image-placeholder image-dday" aria-hidden="true"><b>D-DAY</b><span>MACOS WIDGET</span></span><img src="assets/img/portfolio/portfolio-dday.jpg" alt="디데이 macOS 캘린더 및 바탕화면 위젯" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button><div class="project-body"><div class="project-meta"><span>06 / PERSONAL</span><span>MACOS</span></div><h3><a href="portfolio-details-dday.html">디데이 <span aria-hidden="true">↗</span></a></h3><p>캘린더·할 일·디데이를 메뉴바와 데스크톱 위젯에 표시합니다.</p><div class="project-tags"><span>macOS</span><span>Widget</span></div></div>
+          </article>
+          <article class="project-card project-third" id="project-pdp" data-type="web" data-keywords="환자대기안내 시스템 pdp healthcare hospital web">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-pdp.png" data-title="환자대기안내 시스템" aria-label="환자대기안내 시스템 프로젝트 이미지 크게 보기"><span class="image-placeholder image-pdp" aria-hidden="true"><b>Patient Display</b><span>HEALTHCARE</span></span><img src="assets/img/portfolio/portfolio-pdp.png" alt="병원 환자대기안내 시스템 화면" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button><div class="project-body"><div class="project-meta"><span>07</span><span>WEB</span></div><h3><button type="button" class="title-image-open" data-lightbox="assets/img/portfolio/portfolio-pdp.png" data-title="환자대기안내 시스템">환자대기안내 <span aria-hidden="true">↗</span></button></h3><p>병원 환자 대기 정보 안내.</p></div>
+          </article>
+          <article class="project-card project-third" id="project-ivy" data-type="web" data-keywords="ivy leaguer 외국인 채용 플랫폼 web">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-ivy.jpg" data-title="IVY LEAGUER" aria-label="IVY LEAGUER 프로젝트 이미지 크게 보기"><span class="image-placeholder image-ivy" aria-hidden="true"><b>IVY LEAGUER</b><span>RECRUITMENT</span></span><img src="assets/img/portfolio/portfolio-ivy.jpg" alt="IVY LEAGUER 외국인 채용 플랫폼 메인 화면" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button><div class="project-body"><div class="project-meta"><span>08</span><span>WEB</span></div><h3><a href="portfolio-details-Ivy.html">IVY LEAGUER <span aria-hidden="true">↗</span></a></h3><p>외국인 채용 플랫폼.</p></div>
+          </article>
+          <article class="project-card project-third" id="project-voix" data-type="web" data-keywords="voix 뮤직 스트리밍 공연 차트 예매 spring oracle">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-voix.jpg" data-title="VOIX" aria-label="VOIX 프로젝트 이미지 크게 보기"><span class="image-placeholder image-voix" aria-hidden="true"><b>VOIX</b><span>MUSIC PLATFORM</span></span><img src="assets/img/portfolio/portfolio-voix.jpg" alt="VOIX 음악 통합 서비스 웹 화면" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button><div class="project-body"><div class="project-meta"><span>09</span><span>WEB</span></div><h3><a href="portfolio-details.html">VOIX <span aria-hidden="true">↗</span></a></h3><p>음악·차트·공연 정보를 모은 통합 서비스.</p></div>
+          </article>
+          <article class="project-card project-third" id="project-faq" data-type="web" data-keywords="faq 사내 내부 서비스 knowledge web">
+            <button class="project-image" type="button" data-lightbox="assets/img/portfolio/portfolio-faq.png" data-title="사내 FAQ" aria-label="사내 FAQ 프로젝트 이미지 크게 보기"><span class="image-placeholder image-faq" aria-hidden="true"><b>Internal FAQ</b><span>KNOWLEDGE BASE</span></span><img src="assets/img/portfolio/portfolio-faq.png" alt="사내 FAQ 웹 시스템의 목록 화면" loading="lazy" width="1000" height="563"><span class="zoom-mark" aria-hidden="true">↗</span></button><div class="project-body"><div class="project-meta"><span>10</span><span>WEB</span></div><h3><button type="button" class="title-image-open" data-lightbox="assets/img/portfolio/portfolio-faq.png" data-title="사내 FAQ">사내 FAQ <span aria-hidden="true">↗</span></button></h3><p>사내 정보를 검색하고 공유하는 서비스.</p></div>
+          </article>
         </div>
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="skill-card">
-              <div class="skill-card-head">
-                <span class="skill-card-icon"><i class="bx bx-code-alt"></i></span>
-                <h3>Frontend</h3>
-              </div>
-              <div class="skill-chips">
-                <span class="chip core"><i class="bx bxl-react"></i>React</span>
-                <span class="chip core">Next.js</span>
-                <span class="chip core"><i class="bx bxl-typescript"></i>TypeScript</span>
-                <span class="chip core"><i class="bx bxl-javascript"></i>JavaScript</span>
-                <span class="chip"><i class="bx bxl-html5"></i>HTML5</span>
-                <span class="chip"><i class="bx bxl-css3"></i>CSS3</span>
-                <span class="chip"><i class="bx bxl-sass"></i>Sass</span>
-                <span class="chip"><i class="bx bxl-tailwind-css"></i>Tailwind CSS</span>
-                <span class="chip">Recoil</span>
-                <span class="chip">TanStack Query</span>
-                <span class="chip">React Hook Form</span>
-                <span class="chip">Chart.js</span>
-                <span class="chip"><i class="bx bxl-jquery"></i>jQuery</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-card">
-              <div class="skill-card-head">
-                <span class="skill-card-icon"><i class="bx bx-server"></i></span>
-                <h3>Backend</h3>
-              </div>
-              <div class="skill-chips">
-                <span class="chip core"><i class="bx bxl-java"></i>Java</span>
-                <span class="chip core"><i class="bx bxl-spring-boot"></i>Spring Framework</span>
-                <span class="chip"><i class="bx bxl-spring-boot"></i>Spring Boot</span>
-                <span class="chip core">MyBatis</span>
-                <span class="chip">Spring Data JPA</span>
-                <span class="chip">Spring Security</span>
-                <span class="chip">JSP / JSTL</span>
-                <span class="chip"><i class="bx bxl-nodejs"></i>Node.js (Koa)</span>
-                <span class="chip"><i class="bx bxl-microsoft"></i>C# / .NET</span>
-                <span class="chip">JWT · OAuth2</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up">
-            <div class="skill-card">
-              <div class="skill-card-head">
-                <span class="skill-card-icon"><i class="bx bx-mobile-alt"></i></span>
-                <h3>Mobile</h3>
-              </div>
-              <div class="skill-chips">
-                <span class="chip"><i class="bx bxl-android"></i>Android (Kotlin · Java)</span>
-                <span class="chip"><i class="bx bxl-apple"></i>iOS (Swift)</span>
-                <span class="chip core"><i class="bx bxl-react"></i>React Native</span>
-                <span class="chip">Expo</span>
-                <span class="chip">SwiftUI · watchOS</span>
-                <span class="chip">HealthKit</span>
-                <span class="chip">Wear OS</span>
-                <span class="chip">WebView</span>
-                <span class="chip"><i class="bx bxl-firebase"></i>Firebase FCM</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="skill-card">
-              <div class="skill-card-head">
-                <span class="skill-card-icon"><i class="bx bx-data"></i></span>
-                <h3>Database &amp; DevOps</h3>
-              </div>
-              <div class="skill-chips">
-                <span class="chip core">MySQL</span>
-                <span class="chip">MSSQL</span>
-                <span class="chip">OracleDB</span>
-                <span class="chip">PostgreSQL (Supabase)</span>
-                <span class="chip"><i class="bx bxl-firebase"></i>Firestore</span>
-                <span class="chip"><i class="bx bxl-docker"></i>Docker</span>
-                <span class="chip"><i class="bx bxl-kubernetes"></i>Kubernetes</span>
-                <span class="chip">Jenkins</span>
-                <span class="chip"><i class="bx bxl-github"></i>GitHub Actions</span>
-                <span class="chip"><i class="bx bxl-git"></i>Git</span>
-                <span class="chip">Nginx</span>
-                <span class="chip">Tomcat</span>
-                <span class="chip"><i class="bx bxl-figma"></i>Figma</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+        <p class="project-archive-note">화면 이미지는 기존 포트폴리오에 공개한 실제 프로젝트 자료입니다. 썸네일을 클릭하면 확대해서 볼 수 있습니다.</p>
       </div>
-    </section><!-- End Skills Section -->
+    </section>
 
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>경력</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12" data-aos="fade-up">
-            <div class="career-list">
-
-              <div class="career-item current">
-                <div class="career-head">
-                  <div class="career-headline">
-                    <h4 class="career-company">(주)더바디채널</h4>
-                    <span class="career-role">운동컨텐츠연구개발팀 · 대리 · 웹 / 앱 개발자</span>
-                  </div>
-                  <div class="career-meta">
-                    <span class="career-period">2026.08 ~ 현재</span>
-                    <span class="badge-now">재직중</span>
-                  </div>
-                </div>
-                <ul class="career-desc">
-                  <li>통합 ERP 시스템(회원 · 결제 · 스케줄 · 급여 · 매출 · 본사회계) 개발 및 유지보수</li>
-                  <li>회원용 / 직원용 웹 서비스 프론트엔드 개발</li>
-                  <li>브랜드 사이트(바디채널 · 바렛톤 · 짐그라운드 · HIT35) 개발 및 운영</li>
-                  <li>회원 앱(Android · iOS) 및 매장용 코치 / TV 앱 개발</li>
-                  <li>QR 출입 서버, 설문 빌더 등 사내 서비스 개발</li>
-                </ul>
-
-                <div class="career-projects">
-                  <div class="career-project">
-                    <h5>ERP · 결제 / 정산</h5>
-                    <ul class="career-desc">
-                      <li>포트원 결제 취소가 실패했는데 전산에서는 환불되던 문제, 일괄결제 웹훅에서 상품이 발급되지 않거나 매출이 빠지던 문제, 미수금·인센티브·환불 차감 매출이 반영되지 않던 문제 수정</li>
-                      <li>유효기간 변경 GM 승인, 레슨권 양도 승인, 0원 상품 결제 승인 기능 개발. 유효기간 변경은 요청을 등록하기 전에 실제 반영 로직을 한 번 돌려 결제일·회원권 기간·락커 중복을 확인하고 되돌림</li>
-                      <li>포인트 기능 개발: 상품별 포인트 사용 여부(기초상품 기본값, 지점별 설정), 회원앱 결제 한도, 그룹수업 출석 적립</li>
-                      <li>그룹수업 자동 복사 cron 수정: 수업 단위로 복사 여부를 판단하고, 휴강·예약 이력을 유지하며, 같은 수업이 두 번 만들어지지 않게 함</li>
-                      <li>지점 공지 로그인 팝업 · 수신확인, '이달의 공동구매' 메뉴 · 댓글 API 및 회원 / 직원 앱 화면 개발</li>
-                    </ul>
-                  </div>
-                  <div class="career-project">
-                    <h5>FitSignal 심박 운동 앱 (iOS · Android · Apple Watch · Wear OS)</h5>
-                    <ul class="career-desc">
-                      <li>Apple Watch HKLiveWorkoutBuilder 기반 워치 단독 측정 · 폰 동기화, 삼성헬스 · Galaxy Watch 심박 연동</li>
-                      <li>심박 기반 Keytel 칼로리 공식 적용, 시간 가중 평균 심박 계산, 실기기 없이 워치 연동을 테스트할 수 있는 환경 구축</li>
-                      <li>피드 · 스토리 · 팔로우 · 러닝 매칭 · 모임 · 랭킹 · 30일 출석 챌린지 · DM 등 소셜 기능 구현, 바디채널 계정 로그인 통합</li>
-                      <li>백엔드 DB 스키마를 새로 설계하고 데이터 이관. 동시에 가입하면 id가 겹치던 문제(max(id)+1 → AUTO_INCREMENT) 해결, 운동기록 일괄 업로드 API·랭킹 집계 배치·ERP 출결 연동 챌린지 개발</li>
-                      <li>모든 오류가 500으로 응답되던 것을 상황에 맞는 HTTP 에러 코드로 바꿔 인증 실패와 실제 장애를 구분</li>
-                    </ul>
-                  </div>
-                  <div class="career-project">
-                    <h5>모바일 앱 운영</h5>
-                    <ul class="career-desc">
-                      <li>회원 / 직원 Android 앱 targetSdk 36 및 사진 · 동영상 권한 정책 대응, Google Play 심사 반려 대응</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="tech-stack">
-                  <div class="tech-row">
-                    <span class="tech-label">Frontend</span>
-                    <div class="tech-tags">
-                      <span>React</span>
-                      <span>Next.js</span>
-                      <span>TypeScript</span>
-                      <span>JavaScript</span>
-                      <span>Recoil</span>
-                      <span>TanStack Query</span>
-                      <span>React Hook Form</span>
-                      <span>Tailwind CSS</span>
-                      <span>daisyUI</span>
-                      <span>Sass</span>
-                      <span>Vite</span>
-                      <span>Framer Motion</span>
-                      <span>Chart.js</span>
-                      <span>Recharts</span>
-                      <span>Axios</span>
-                    </div>
-                  </div>
-                  <div class="tech-row">
-                    <span class="tech-label">Backend</span>
-                    <div class="tech-tags">
-                      <span>Java</span>
-                      <span>Spring Framework</span>
-                      <span>Spring Boot</span>
-                      <span>Spring Security</span>
-                      <span>Spring Data JPA</span>
-                      <span>MyBatis</span>
-                      <span>JSP / JSTL</span>
-                      <span>JWT · OAuth2</span>
-                      <span>Apache POI</span>
-                      <span>iText7</span>
-                      <span>Firebase Admin</span>
-                      <span>Maven</span>
-                      <span>Gradle</span>
-                      <span>Node.js (Koa)</span>
-                    </div>
-                  </div>
-                  <div class="tech-row">
-                    <span class="tech-label">Mobile</span>
-                    <div class="tech-tags">
-                      <span>Android (Kotlin · Java)</span>
-                      <span>iOS (Swift)</span>
-                      <span>React Native</span>
-                      <span>WebView</span>
-                      <span>Firebase FCM</span>
-                      <span>HealthKit</span>
-                      <span>Apple Watch (WatchConnectivity)</span>
-                      <span>Wear OS</span>
-                      <span>Samsung Health</span>
-                      <span>Kakao Map</span>
-                      <span>PortOne</span>
-                    </div>
-                  </div>
-                  <div class="tech-row">
-                    <span class="tech-label">Database</span>
-                    <div class="tech-tags">
-                      <span>MySQL</span>
-                      <span>HikariCP</span>
-                    </div>
-                  </div>
-                  <div class="tech-row">
-                    <span class="tech-label">Infra / DevOps</span>
-                    <div class="tech-tags">
-                      <span>Docker</span>
-                      <span>Kubernetes</span>
-                      <span>ArgoCD</span>
-                      <span>Jenkins</span>
-                      <span>GitHub Actions</span>
-                      <span>Nginx</span>
-                      <span>PM2</span>
-                      <span>Tomcat</span>
-                      <span>Git</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="career-item">
-                <div class="career-head">
-                  <div class="career-headline">
-                    <h4 class="career-company">이원헬스케어(주)</h4>
-                    <span class="career-role">솔루션운영본부 솔루션운영팀 · 전임연구원</span>
-                  </div>
-                  <div class="career-meta">
-                    <span class="career-period">2024.02 ~ 2026.07</span>
-                    <span class="career-duration">2년 6개월</span>
-                  </div>
-                </div>
-                <ul class="career-desc">
-                  <li>병원 솔루션 개발 · 운영 및 유지보수</li>
-                  <li>환자대기안내 시스템(PDP), 통계 대시보드, 사내 FAQ 등 사내 서비스 개발</li>
-                </ul>
-                <div class="tech-stack">
-                  <div class="tech-row">
-                    <span class="tech-label">Frontend</span>
-                    <div class="tech-tags">
-                      <span>React</span>
-                      <span>JavaScript</span>
-                      <span>WebView</span>
-                    </div>
-                  </div>
-                  <div class="tech-row">
-                    <span class="tech-label">Backend</span>
-                    <div class="tech-tags">
-                      <span>C#</span>
-                      <span>.NET Framework</span>
-                      <span>Java</span>
-                      <span>Spring</span>
-                      <span>MyBatis</span>
-                      <span>Node.js</span>
-                    </div>
-                  </div>
-                  <div class="tech-row">
-                    <span class="tech-label">Database</span>
-                    <div class="tech-tags">
-                      <span>MSSQL</span>
-                      <span>OracleDB</span>
-                    </div>
-                  </div>
-                  <div class="tech-row">
-                    <span class="tech-label">Infra / DevOps</span>
-                    <div class="tech-tags">
-                      <span>Docker</span>
-                      <span>Tomcat</span>
-                      <span>Git</span>
-                      <span>TortoiseSVN</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+    <section class="section-expertise" id="expertise" aria-labelledby="expertise-title">
+      <div class="shell">
+        <div class="section-head expertise-intro"><div><div class="section-index dark-index"><span>02</span><i></i> TECHNICAL EXPERTISE</div><h2 id="expertise-title">결제, 데이터, 워치.<br>개발하며 해결한 것들<span class="title-dot">.</span></h2></div><p>결제 상태 불일치, 데이터 충돌, 운동 기록 동기화 등 실무에서 다룬 문제를 기술과 함께 기록했습니다.</p></div>
+        <div class="expertise-layout">
+          <div class="expertise-tabs" role="tablist" aria-label="기술 전문 영역 선택" aria-orientation="vertical">
+            <button role="tab" aria-selected="true" aria-controls="skill-backend" tabindex="0" id="skill-tab-backend" class="expertise-tab active" data-skill="backend"><span class="tab-num">01</span><span class="tab-name"><b>Backend &amp; Payments</b><small>Java · Spring · MySQL</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+            <button role="tab" aria-selected="false" aria-controls="skill-mobile" tabindex="-1" id="skill-tab-mobile" class="expertise-tab" data-skill="mobile"><span class="tab-num">02</span><span class="tab-name"><b>Mobile &amp; Wearables</b><small>React Native · Swift · HealthKit</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+            <button role="tab" aria-selected="false" aria-controls="skill-frontend" tabindex="-1" id="skill-tab-frontend" class="expertise-tab" data-skill="frontend"><span class="tab-num">03</span><span class="tab-name"><b>Frontend &amp; Product</b><small>React · Next.js · TypeScript</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+            <button role="tab" aria-selected="false" aria-controls="skill-data" tabindex="-1" id="skill-tab-data" class="expertise-tab" data-skill="data"><span class="tab-num">04</span><span class="tab-name"><b>Data &amp; Operations</b><small>MySQL · Batch · Deployment</small></span><span class="tab-arrow" aria-hidden="true">↗</span></button>
+          </div>
+          <div class="expertise-panels">
+            <article class="expertise-panel" role="tabpanel" id="skill-backend" aria-labelledby="skill-tab-backend" tabindex="0"><div class="panel-top"><span>ENGINEERING NOTE / 01</span><span>PRODUCTION SYSTEM</span></div><h3>결제 결과와 내부 데이터가<br>일치하도록 만드는 일.</h3><p class="panel-summary">회원권·결제·매출이 이어지는 ERP에서 실제 결제사 응답과 내부 처리 상태가 어긋나는 문제를 추적하고 수정했습니다.</p><div class="proof-list"><div><span class="proof-no">01</span><p>포트원 결제 취소 실패 시 내부 시스템만 환불 완료 처리되던 흐름 수정</p></div><div><span class="proof-no">02</span><p>일괄결제 웹훅에서 상품 발급·매출 반영이 누락되는 문제 해결</p></div><div><span class="proof-no">03</span><p>유효기간 변경·양도·0원 결제에 GM 승인 절차와 사전 검증 추가</p></div></div><div class="panel-stack"><span>USED IN PRACTICE</span><div><span>Java</span><span>Spring</span><span>MyBatis</span><span>MySQL</span><span>PortOne</span></div></div></article>
+            <article class="expertise-panel" role="tabpanel" id="skill-mobile" aria-labelledby="skill-tab-mobile" tabindex="0" hidden><div class="panel-top"><span>ENGINEERING NOTE / 02</span><span>CROSS-PLATFORM APP</span></div><h3>워치에서 측정한 데이터를<br>앱까지 연결하는 일.</h3><p class="panel-summary">FitSignal에서 스마트폰과 워치가 각각 다른 환경에 있어도 운동 기록을 수집하고 확인할 수 있도록 구현했습니다.</p><div class="proof-list"><div><span class="proof-no">01</span><p>Apple Watch HKLiveWorkoutBuilder 기반 워치 단독 운동 측정 구현</p></div><div><span class="proof-no">02</span><p>WatchConnectivity 기반 iPhone 동기화 및 삼성헬스·Galaxy Watch 심박 연동</p></div><div><span class="proof-no">03</span><p>Keytel 칼로리 계산, 시간 가중 평균 심박, 연동 테스트 환경 구성</p></div></div><div class="panel-stack"><span>USED IN PRACTICE</span><div><span>React Native</span><span>Swift</span><span>HealthKit</span><span>WatchConnectivity</span><span>Wear OS</span></div></div></article>
+            <article class="expertise-panel" role="tabpanel" id="skill-frontend" aria-labelledby="skill-tab-frontend" tabindex="0" hidden><div class="panel-top"><span>ENGINEERING NOTE / 03</span><span>PRODUCT DEVELOPMENT</span></div><h3>현장에서 실제 사용하는<br>화면과 업무 흐름.</h3><p class="panel-summary">회원·직원이 반복적으로 사용하는 관리자 화면부터 브랜드 웹과 모바일 UI까지, 업무 과정이 연결되는 인터페이스를 개발했습니다.</p><div class="proof-list"><div><span class="proof-no">01</span><p>회원용·직원용 웹 서비스와 ERP의 회원·스케줄·매출 화면 개발</p></div><div><span class="proof-no">02</span><p>브랜드 사이트 운영과 공지·공동구매·댓글 등 회원 기능 연동</p></div><div><span class="proof-no">03</span><p>병원 내부 통계 대시보드 및 데이터 시각화 서비스 개발 경험</p></div></div><div class="panel-stack"><span>USED IN PRACTICE</span><div><span>React</span><span>Next.js</span><span>TypeScript</span><span>TanStack Query</span><span>Chart.js</span></div></div></article>
+            <article class="expertise-panel" role="tabpanel" id="skill-data" aria-labelledby="skill-tab-data" tabindex="0" hidden><div class="panel-top"><span>ENGINEERING NOTE / 04</span><span>RELIABILITY &amp; OPERATION</span></div><h3>실제로 운영하면 생기는<br>예외를 다루는 일.</h3><p class="panel-summary">운영 중 발생한 데이터 충돌과 배치 중복, API 응답 오류를 재현하고 처리 흐름을 바로잡았습니다.</p><div class="proof-list"><div><span class="proof-no">01</span><p>동시 회원 가입 시 <code>max(id)+1</code>로 발생하던 ID 충돌을 AUTO_INCREMENT로 변경</p></div><div><span class="proof-no">02</span><p>그룹수업 자동 복사 cron의 중복 생성·휴강·예약 이력 처리 개선</p></div><div><span class="proof-no">03</span><p>모든 오류가 500으로 처리되던 API를 상황별 HTTP 상태 코드로 구분</p></div></div><div class="panel-stack"><span>USED IN PRACTICE</span><div><span>MySQL</span><span>Spring</span><span>Batch / Cron</span><span>Docker</span><span>Jenkins</span></div></div></article>
           </div>
         </div>
-
-        <div class="section-title mt-5">
-          <h2>학력 및 활동</h2>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>한양사이버대학교</h4>
-              <h5>2024 - 2025.08 (졸업)(학사)</h5>
-              <ul>
-                <li>컴퓨터공학과</li>
-                <li>학점 : 3.63</li>
-                <li>지역 : 서울</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>인하공업전문대학</h4>
-              <h5>2020 - 2024 (졸업)(전문학사)</h5>
-              <ul>
-                <li>정보통신공학과</li>
-                <li>학점 : 3.89 / 4.5</li>
-                <li>지역 : 인천 미추홀구</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>대양고등학교</h4>
-              <h5>2016 - 2019 (졸업)</h5>
-              <ul>
-                <li>전자통신과</li>
-                <li>특성화고등학교</li>
-                <li>지역 : 부산 남구</li>
-              </ul>
-            </div>
-
-            <h3 class="resume-title">Certificate</h3>
-            <div class="resume-item">
-              <h4>전자기기 기능사</h4>
-              <h5>2018.07.06</h5>
-              <p>한국산업인력공단</p>
-            </div>
-            <div class="resume-item">
-              <h4>2종보통면허</h4>
-              <h5>2022.10.27</h5>
-              <p>부산광역시경찰청</p>
-            </div>
-            <div class="resume-item">
-              <h4>아래한글</h4>
-              <h5>2016</h5>
-              <p>ITQ</p>
-            </div>
-
-            <h3 class="resume-title">병역사항</h3>
-            <div class="resume-item">
-              <h4>공군 제 1 미사일방어여단 기지대대</h4>
-              <h5>2021.02.15 - 2022.11.14</h5>
-              <p>유선통신체계정비병</p>
-              <p>병장 만기전역</p>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">External activities</h3>
-            <div class="resume-item">
-              <h4>컴퓨터공학과 캡스톤 디자인 경진대회</h4>
-              <h5>2025.08.23</h5>
-              <p><strong>우수상</strong></p>
-              <p>SW제작 주제</p>
-              <p>1인가구에 맞는 집수리, 집안일, 분리수거 가이드 (조용한 집사 Silent Butler) 페이지 제작</p>
-              <p>한양사이버대학교 컴퓨터공학과</p>
-            </div>
-            <div class="resume-item">
-              <h4>강원 창업오디션 아이디어 해커톤</h4>
-              <h5>2023.11.16 - 2023.11.17 (30H)</h5>
-              <p><strong>우수상</strong></p>
-              <p>개발자, 기획자로 참여</p>
-              <p>강원창조경제혁신센터</p>
-            </div>
-            <div class="resume-item">
-              <h4>인천일보아카데미</h4>
-              <h5>2023.04.11 - 2023.11.15</h5>
-              <p>NCS 파이썬 웹크롤링을 활용한 빅데이터구축 분석 및 시각화 개발자 양성과정</p>
-              <ul>
-                <li>-프로젝트 진행내용-<br>
-                  프론트엔드에는 html, css, JavaScript, Jquery, jstl, ajax 백엔드에는
-                  Java, Jsp, Spring FraemWork 데이터베이스로는 Oracle SQL 이용하고
-                  Jsoup, Selenium, Python등을 활용하여 데이터를 크롤링하여 시각화
-                </li>
-                <li>
-                  멜론, 바이브, 벅스, 지니 등 스트리밍을 지원하는 음원 사이트를 크롤링 하여 실시간 통합 차트를 보여주고
-                  각 음원 사이트의 월 정액권을 비교할수 있으며 인터파크, 예스24 등을 크롤링하여 티켓, 앨범, 공연정보
-                  등의 통합 정보확인 및 예매 서비스
-                </li>
-                <li>유튜브 DATA API, 유튜브 IFRAME API 를 활용한 뮤직비디오, 음원 스트리밍 서비스를 지원</li>
-                <li>6인 프로젝트</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>IGM (Inha Game Makers)</h4>
-              <h5>2023</h5>
-              <p>교내 게임 개발 동아리</p>
-              <p>개발자</p>
-            </div>
-            <div class="resume-item">
-              <h4>PUBG KOREA CONTENDERS Phase3</h4>
-              <h5>2019.08 - 2019.10</h5>
-              <p><strong>15등 입상</strong></p>
-              <p>크래프톤(KRAFTON), 온게임넷(OGN)</p>
-              <p>배틀그라운드 PUBG에서 주최된 PKC Phase3</p>
-            </div>
-          </div>
-
-        </div>
-
+        <div class="stack-overview"><div class="stack-title"><span>TECH STACK</span><small>업무 및 프로젝트에서 사용한 기술</small></div><div class="stack-rows"><div class="stack-row"><b>Frontend</b><p>React <i>·</i> Next.js <i>·</i> TypeScript <i>·</i> JavaScript <i>·</i> TanStack Query <i>·</i> Recoil <i>·</i> Tailwind CSS</p></div><div class="stack-row"><b>Backend</b><p>Java <i>·</i> Spring Boot / Framework <i>·</i> MyBatis <i>·</i> JPA <i>·</i> Spring Security <i>·</i> C# / .NET <i>·</i> Node.js</p></div><div class="stack-row"><b>Mobile</b><p>React Native <i>·</i> Kotlin <i>·</i> Swift <i>·</i> SwiftUI <i>·</i> HealthKit <i>·</i> watchOS <i>·</i> Wear OS <i>·</i> Firebase</p></div><div class="stack-row"><b>Data / Infra</b><p>MySQL <i>·</i> MSSQL <i>·</i> OracleDB <i>·</i> PostgreSQL <i>·</i> Docker <i>·</i> Kubernetes <i>·</i> Jenkins <i>·</i> GitHub Actions</p></div></div></div>
       </div>
-    </section><!-- End Resume Section -->
+    </section>
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg" style="padding-left: 10px; padding-right: 10px;">
-      <div class="container">
+    <section class="section-experience shell" id="experience" aria-labelledby="experience-title"><div class="section-head"><div><div class="section-index"><span>03</span><i></i> PROFESSIONAL EXPERIENCE</div><h2 id="experience-title">일해온 곳<span class="title-dot">.</span></h2><p>신규 서비스 개발과 기존 시스템 운영을 함께 맡아왔습니다.</p></div></div>
+      <div class="career-list"><article class="career"><div class="career-date"><span>2026.08 — 2026.11</span><span>3개월</span></div><div class="career-info"><div class="career-title"><h3>(주)더바디채널</h3><span>01 / RECENT</span></div><p class="career-role">운동컨텐츠연구개발팀 · 대리 · 웹 / 앱 개발자</p><p class="career-summary">통합 ERP, 결제·정산, 회원/직원 웹, 모바일 앱, FitSignal 및 웨어러블 기능 개발.</p><details><summary>담당 업무 상세보기 <span aria-hidden="true">+</span></summary><ul><li>회원·결제·스케줄·급여·매출·본사회계 ERP 개발 및 유지보수</li><li>포트원 취소·웹훅 및 포인트·승인 프로세스 개선</li><li>FitSignal 심박 기록, 워치·건강 앱 연동 및 소셜 기능 개발</li><li>브랜드 사이트와 회원/직원 웹 및 Android/iOS 앱 개발·운영</li><li>QR 출입 서버, 설문 빌더, 그룹수업 복사 로직 등 내부 서비스</li><li>Android targetSdk 36 및 Google Play 정책 대응</li></ul></details></div></article>
+      <article class="career"><div class="career-date"><span>2024.02 — 2026.07</span><span>2년 6개월</span></div><div class="career-info"><div class="career-title"><h3>이원헬스케어(주)</h3><span>02 / PREVIOUS</span></div><p class="career-role">솔루션운영본부 솔루션운영팀 · 전임연구원</p><p class="career-summary">병원 42곳 OCS/EMR 유지보수, 2024.02 ~ 2026.07 요청 3,300여 건 처리 (소스 · 프로시저 직접 수정 289건). 환자대기안내 시스템(PDP), 통계 대시보드, 사내 FAQ 등 사내 서비스 개발.</p><details><summary>영상의학 · PACS 연동 <span aria-hidden="true">+</span></summary><ul><li>판독의가 PACS 판독 후 OCS에 CVR(이상결과)을 다시 입력해야 하던 문제를, 판독결과 테이블 트리거에서 'CVR RESULT' 문구를 감지해 CVR 등록 프로시저를 호출하도록 개발해 실서버에 반영함</li><li>PACS에 처방의 이름이 표시되지 않던 문제를 워크리스트 · 큐 생성 프로시저가 사번 앞에 0을 붙이던 것으로 규명해 프로시저 2개를 수정하고 큐 테이블 기존 데이터를 일괄 보정함</li><li>"판독했는데 결과가 안 넘어온다"는 문의 7건(병원 6곳)을 처방 → 판독결과 → 워크리스트 → 큐 테이블 순으로 추적해, PACS 결과 미전송 · 브로커 미기동 · 장비 모달리티 설정 등 업체 측 원인을 근거와 함께 판명함</li><li>판독문 이상값('...', 줄바꿈만 있는 값, ESC 제어문자) 때문에 판독소견서 · 진료의뢰서 · 의무기록사본이 깨지던 문제 3건을 Rexpert 쿼리와 조회 프로시저에 빈 값 · 제어문자 검사를 넣고 데이터를 정정해 해결함</li><li>당일내원 · PACS 바로전달 · 포터블 처방이 영상결과 조회에서 빠지던 문제와 외래 → 입원 전환 시 판독 상태가 어긋나 대기안내(PDP)에 남던 문제를 조회 프로시저 보완으로 수정, 판독소견서를 고시 기재 항목(검사일시 · 판독일시)에 맞춰 개편함</li></ul></details><details><summary>외부 시스템 연동 (수탁검사 · API · 결제) <span aria-hidden="true">+</span></summary><ul><li>씨젠 수탁검사 이미지 결과가 FTP에서 HTTPS로 바뀌는 일정에 맞춰, FTP만 처리하던 수신 로직에 HTTPS 수신을 추가하고 공통코드 스위치로 방식을 전환하도록 구현함</li><li>이원의료재단 수탁 인터페이스 웹 방식 전환(관련 20건 · 병원 5곳): 웹 연동 모듈 추가, 결과 테이블 컬럼 8개 추가(Oracle), 검사유형별 결과파일 확장자 분기, 수신 XML 분석으로 송신 측 누락 판정</li><li>키오스크 카드수납 후 POS 승인 오류 4건이 남던 문제를 승인일자 8자리가 20자리 승인번호 형식과 맞지 않는 것으로 찾아, 키오스크 수납 프로시저에서 형식을 변환하고 오류 데이터를 정리함</li><li>신환 · 초진 SMS 중복 발송을 외부 브로커 이중 실행으로 규명해 발송 프로시저에 중복 체크를 추가하고, 월 15만 건이 넘는 알림톡 · LMS 전송결과를 3,000건 제한 API를 일 단위로 반복 호출해 조회하는 화면을 신규 개발함</li></ul></details><details><summary>장애 대응 · 성능 · 데이터 정합성 <span aria-hidden="true">+</span></summary><ul><li>퇴원심사 환자 조회 지연(2회 조회에 1분 이상)을 행마다 호출되던 스칼라 함수와 함수 조건절로 찾아 프로시저 3개를 수정, 프로시저당 13초 → 약 3초로 단축함</li><li>응급실 NEDIS 연동 DB 연결 장애를 Oracle Listener 점검 후 서버 디스크 용량 부족으로 찾아 당일 복구하고, 반복되는 OCS 지연 · 멈춤은 DMV로 블로킹 세션 · CPU · 메모리를 확인한 뒤 인덱스 REBUILD · 통계 갱신으로 대응함</li><li>연명의료(DNR) 설정이 퇴원 후 풀리던 문제를 이력 트리거에 컬럼을 추가해 추적하고, 다른 화면에서 저장할 때 기본값('N')으로 덮어쓰던 환자정보 수정 프로시저를 고침</li><li>외래 → 입원 전환 시 보험유형 · 처방 · 평가 이관 누락 11건(병원 7곳)을 이력 테이블로 추적해 보정하고, 보험유형 생성 프로시저에 주유형 자동 보정 로직을 넣어 전 병원에 반영함</li></ul></details><details><summary>사용 기술 상세보기 <span aria-hidden="true">+</span></summary><ul><li>React, JavaScript, WebView, Infragistics (UltraWinGrid), Rexpert 기반 화면 · 리포트 개발</li><li>C# / .NET Framework, VB, Java Spring, MyBatis, Node.js</li><li>MSSQL, OracleDB (Stored Procedure · Trigger)</li><li>PACS · MWL, FTP / HTTPS, HIRA Agent, 알림톡 API, VAN · 카드 OCX 연동</li><li>Docker, Tomcat, Git, TortoiseSVN</li></ul></details></div></article></div>
+    </section>
 
-        <div class="section-title">
-          <h2>Portfolio</h2>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="text-center resume">
-              <h3 class="resume-title"
-                style="color: #f4a73a;-webkit-text-stroke: 0.5px black;font-family: auto;margin-bottom: 0px;">달님 (Dalnim)
-              </h3>
-            </div>
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-dalnim2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-dalnim2.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="-달님- iPhone · Apple Watch 소셜 운동 기록 앱"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details-dalnim.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app filter-web">
-            <div class="text-center resume">
-              <h3 class="resume-title"
-                style="color: #3d6b4a;-webkit-text-stroke: 0.5px black;font-family: auto;margin-bottom: 0px;">차곡 (Chagok)
-              </h3>
-            </div>
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-chagok.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-chagok.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="-차곡- 공부 스톱워치, 앱·사이트 차단"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details-chagok.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="text-center resume">
-              <h3 class="resume-title"
-                style="color: #ff3355;-webkit-text-stroke: 0.5px black;font-family: auto;margin-bottom: 0px;">FitSignal
-              </h3>
-            </div>
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-fitsignal.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-fitsignal.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="-FitSignal- 심박 기반 운동 기록 · 소셜 앱"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details-fitsignal.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="text-center resume">
-              <h3 class="resume-title"
-                style="color: #ff7a1a;-webkit-text-stroke: 0.5px black;font-family: auto;margin-bottom: 0px;">디데이 (DDay)
-              </h3>
-            </div>
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-dday.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-dday.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="-디데이- macOS D-Day · 캘린더 · 할 일 위젯 앱"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details-dday.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="text-center resume">
-              <h3 class="resume-title"
-                style="color: green;-webkit-text-stroke: 0.5px black;font-family: auto;margin-bottom: 0px;">IVY LEAGUER
-              </h3>
-            </div>
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-ivy.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-ivy.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="-IVY LEAGUER- 외국인 채용 플랫폼"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details-Ivy.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="text-center resume">
-              <h3 class="resume-title"
-                style="color: #472400;-webkit-text-stroke: 0.5px black;font-family: auto;margin-bottom: 0px;">VOIX</h3>
-            </div>
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-voix.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-voix.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="-VOIX Project- 음악 스트리밍, 음악 종합 커뮤니티, 티켓 예매, 가격,차트비교 플랫폼"><i
-                    class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="text-center resume">
-              <h3 class="resume-title"
-                style="color: rgb(255, 47, 11);-webkit-text-stroke: 0.5px black;font-family: auto;margin-bottom: 0px;">환자대기안내 시스템
-              </h3>
-            </div>
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-pdp.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-pdp.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="-PDP- 환자대기안내 시스템"><i class="bx bx-plus"></i></a>
-                <!-- <a href="portfolio-details-Ivy.html" title="More Details"><i class="bx bx-link"></i></a> -->
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="text-center resume">
-              <h3 class="resume-title"
-                style="color: rgb(13, 57, 255);-webkit-text-stroke: 0.5px black;font-family: auto;margin-bottom: 0px;">통계 대시보드
-              </h3>
-            </div>
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-dashboard3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-dashboard3.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="통계 대시보드"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details-dashboard.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="text-center resume">
-              <h3 class="resume-title"
-                style="color: rgb(188, 19, 255);-webkit-text-stroke: 0.5px black;font-family: auto;margin-bottom: 0px;">사내FAQ
-              </h3>
-            </div>
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-faq.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-faq.png" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="사내FAQ"><i class="bx bx-plus"></i></a>
-                <!-- <a href="portfolio-details-Ivy.html" title="More Details"><i class="bx bx-link"></i></a> -->
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Services Section ======= -->
-    <!-- <section id="services" class="services">
-          <div class="container">
-        
-      
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-        
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a href="">Magni Dolores</a></h4>
-            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a href="">Nemo Enim</a></h4>
-            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-          </div>
-        </div>
-        
-      </div>
-    </section> --><!-- End Services Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <!--    <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-        
-      
-        <div class="section-title">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-        
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section> --><!-- End Testimonials Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <h5>끝까지 봐주셔서 감사합니다.</h5>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-12 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>인천광역시 남동구</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>simhyeoncheol3@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>010-3627-7443</p>
-              </div>
-              <div class="github">
-                <i class="bi bi-github"></i>
-                <h4>Github:</h4>
-                <a href="https://github.com/simhyeoncheol">https://github.com/simhyeoncheol</a>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-      </div>
-      <div class="credits">
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    <section class="section-about" id="about" aria-labelledby="about-title"><div class="shell"><div class="section-head"><div><div class="section-index"><span>04</span><i></i> ABOUT &amp; BACKGROUND</div><h2 id="about-title">더 알아보기<span class="title-dot">.</span></h2></div></div><div class="about-grid"><div class="about-statement"><span>HOW I WORK</span><p>결제 취소 상태 불일치, 회원 데이터 충돌, 워치 기록 동기화처럼 여러 영역을 넘나드는 문제를 다뤄 왔습니다. 사용자 화면과 데이터의 흐름을 함께 보며 원인을 찾습니다.</p><div class="about-links"><a href="mailto:simhyeoncheol3@gmail.com">Email ↗</a><a href="https://github.com/simhyeoncheol" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></div><div class="about-facts"><div><span>최근 경력</span><strong>(주)더바디채널 · 운동컨텐츠연구개발팀 (2026.08 ~ 2026.11)</strong></div><div><span>지역</span><strong>서울특별시 강서구 화곡동</strong></div><div><span>학력</span><strong>한양사이버대학교 컴퓨터공학과 학사<br>인하공업전문대학 정보통신공학과 전문학사</strong></div><div><span>수상</span><strong>2025 컴퓨터공학과 캡스톤 디자인 우수상<br>2023 강원 창업오디션 해커톤 우수상</strong></div><details><summary>그 밖의 이력 및 활동 <span aria-hidden="true">+</span></summary><ul><li>대양고등학교 전자통신과 졸업 (2019)</li><li>전자기기 기능사 (2018), 2종 보통면허 (2022), ITQ 아래한글 (2016)</li><li>공군 유선통신체계정비병 · 병장 만기전역 (2021.02–2022.11)</li><li>인천일보아카데미 빅데이터 구축·분석·시각화 개발자 양성과정 (2023)</li><li>IGM 게임 개발 동아리 (2023)</li><li>PUBG KOREA CONTENDERS Phase 3 15등 (2019)</li></ul></details></div></div></div></section>
+  </main>
+  <footer class="site-footer" id="contact"><div class="shell"><div><span class="footer-kicker">CONTACT</span><a class="footer-mail" href="mailto:simhyeoncheol3@gmail.com">simhyeoncheol3@gmail.com <span aria-hidden="true">↗</span></a></div><div class="footer-bottom"><span>© <span id="year">2026</span> SIM HYEON CHEOL</span><span>BUILD · FIX · MAINTAIN</span><a href="#top">BACK TO TOP ↑</a></div></div></footer>
+  <div class="lightbox" id="lightbox" hidden><div class="lightbox-backdrop" data-close-lightbox></div><div class="lightbox-inner" role="dialog" aria-modal="true" aria-labelledby="lightbox-title"><div class="lightbox-top"><span id="lightbox-title">프로젝트 이미지</span><button type="button" class="lightbox-close" data-close-lightbox aria-label="이미지 닫기">닫기 <span aria-hidden="true">×</span></button></div><div class="lightbox-image-wrap"><img id="lightbox-image" alt="선택한 프로젝트 스크린샷"></div><div class="lightbox-foot">ORIGINAL PROJECT SCREENSHOT <span>ESC TO CLOSE</span></div></div></div>
+  <div class="command-overlay" id="command-overlay" hidden><div class="command-backdrop" data-close-command></div><div class="command-dialog" id="command-dialog" role="dialog" aria-modal="true" aria-labelledby="command-label"><div class="command-head"><span id="command-label">PROJECT SEARCH</span><button type="button" data-close-command aria-label="검색 닫기">ESC</button></div><input id="command-input" autocomplete="off" type="search" placeholder="프로젝트 이름이나 기술을 입력하세요..." aria-label="프로젝트 검색"><div class="command-list" id="command-results" role="listbox" aria-label="검색 결과"></div><div class="command-tip">↑ ↓ 이동 &nbsp; Enter 선택 <span>ESC 닫기</span></div></div></div>
 </body>
-
 </html>

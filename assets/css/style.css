@@ -1926,3 +1926,67 @@ section {
 .project-detail .portfolio-details-slider.ratio-169 .swiper-slide img {
   aspect-ratio: 16 / 9;
 }
+
+.project-detail .flow {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+}
+
+.project-detail .flow-step {
+  flex: 1 1 0;
+  min-width: 0;
+  border: 1px solid #e3edf7;
+  border-top: 4px solid #149ddd;
+  border-radius: 10px;
+  padding: 12px 12px 10px;
+  background: #f8fbfe;
+}
+
+.project-detail .flow-step .flow-sys {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #149ddd;
+  margin-bottom: 4px;
+}
+
+.project-detail .flow-step strong {
+  display: block;
+  font-size: 15px;
+  color: #050d18;
+  margin-bottom: 4px;
+  word-break: keep-all;
+}
+
+.project-detail .flow-step p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  color: #4b5a6c;
+  word-break: keep-all;
+}
+
+.project-detail .flow-arrow {
+  flex: none;
+  display: flex;
+  align-items: center;
+  color: #149ddd;
+  font-size: 18px;
+}
+
+.project-detail .flow-note {
+  font-size: 13.5px;
+  color: #5c6b7f;
+  margin: 12px 0 0;
+}
+
+@media (max-width: 768px) {
+  .project-detail .flow {
+    flex-direction: column;
+  }
+  .project-detail .flow-arrow {
+    justify-content: center;
+    transform: rotate(90deg);
+  }
+}
