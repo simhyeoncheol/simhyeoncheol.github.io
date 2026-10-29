@@ -95,3 +95,4 @@ html.motion.loaded .hero-desc strong:nth-of-type(1){transition-delay:1250ms}html
 .hero{padding-top:34px}.hero-content{padding-top:14px}
 @media(max-width:870px){.hero{padding-top:24px}.hero-content{padding-top:10px}}
 @media(max-width:600px){.hero{padding-top:14px}.hero-content{padding-top:6px}}
+.career .duty-group{margin-top:18px}.career .duty-group h4{margin:0;font-size:13px;font-weight:640;color:#38444d;letter-spacing:-.02em}.career .duty-group ul{margin-top:6px}.career .stack-list{list-style:none;padding-left:0}.career .stack-list li{display:grid;grid-template-columns:92px 1fr;gap:12px;line-height:1.8;padding:3px 0}.career .stack-list b{font:600 11px/2 var(--mono);color:#38444d}
