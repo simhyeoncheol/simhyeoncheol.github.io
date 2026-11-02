@@ -101,6 +101,16 @@
     .proj small{color:var(--muted);font-size:13.5px;line-height:1.55}
     .proj i{font:normal 12px/1.4 var(--mono);color:var(--soft);margin-top:2px}
 
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:20px;align-items:end}
+    @media (min-width:640px){.hero-grid{grid-template-columns:1fr 150px}}
+    .hero-photo{margin:0;max-width:150px}
+    .hero-photo img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border:1px solid var(--rule);background:var(--surface)}
+    .proj-thumb{display:block;margin:-14px -16px 8px;aspect-ratio:16/9;overflow:hidden;background:#eef0f1;border-bottom:1px solid var(--rule)}
+    .proj-thumb img{display:block;width:100%;height:100%;object-fit:cover}
+    .case-fig{margin:0;border-bottom:1px solid var(--rule);background:#fafbfb}
+    .case-fig img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain}
+    .case-fig figcaption{font:12px/1.4 var(--mono);color:var(--soft);padding:6px 18px 8px}
+
     footer{padding:28px 0 48px;border-top:1px solid var(--rule);color:var(--muted);font-size:13px}
     footer .shell{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
 
@@ -139,6 +149,11 @@
       .proj small{font-size:11px;line-height:1.45}
       .proj i{display:none}
       .proj.minor{display:none}
+      .hero-grid{grid-template-columns:1fr 110px}
+      .hero-photo{max-width:110px}
+      .proj-thumb{margin:-8px -10px 6px}
+      .case-fig img{max-height:200px}
+      .case-fig figcaption{padding:4px 14px 6px}
       .proj-tag{font-size:10px}
       main > section:last-of-type{padding-bottom:6px}
     }
@@ -157,11 +172,14 @@
   </header>
 
   <main class="shell">
-    <div class="hero">
+    <div class="hero"><div class="hero-grid"><div class="hero-main">
       <p class="eyebrow">BACKEND ENGINEER / JAVA · SPRING / 2024.02 —</p>
       <h1>심현철<span>.</span></h1>
       <p class="lede">레거시 데이터 흐름을 끝까지 추적하고<br>정합성이 깨지지 않는 코드로 고칩니다.</p>
       <p class="sub">병원정보시스템(MSSQL, Oracle) 2년 6개월과 피트니스 ERP(Java, Spring, MyBatis, MySQL)에서 결제 정합성, SQL 성능, DB 이전, 외부 시스템 연동을 맡았습니다.</p>
+      </div>
+      <figure class="hero-photo"><img src="assets/img/profile-img.jpg" alt="개발자 심현철 프로필 사진" width="300" height="400"></figure>
+      </div>
       <p class="contact">simhyeoncheol3@gmail.com · simhyeoncheol.vercel.app · github.com/simhyeoncheol</p>
       <div class="facts" role="list">
         <div class="fact" role="listitem"><b>40s → 1.78s</b><small>월별 진료 통계 조회 1회 응답 시간</small></div>
@@ -178,7 +196,7 @@
         <div class="stack-row"><b>Backend</b><div class="chips"><span class="chip key">Java</span><span class="chip key">Spring MVC / Boot</span><span class="chip key">MyBatis</span><span class="chip">Spring Security</span><span class="chip">JPA</span><span class="chip">REST API</span></div></div>
         <div class="stack-row"><b>Database</b><div class="chips"><span class="chip key">MySQL</span><span class="chip key">MSSQL</span><span class="chip key">Oracle</span><span class="chip">PostgreSQL</span><span class="chip">Stored Procedure · Trigger</span><span class="chip">실행 계획 · DMV</span></div></div>
         <div class="stack-row"><b>Infra</b><div class="chips"><span class="chip">Docker</span><span class="chip">Kubernetes (k3s)</span><span class="chip">ArgoCD</span><span class="chip">GitHub Actions</span><span class="chip">AWS EC2 · Linux</span></div></div>
-        <div class="stack-row"><b>연동</b><div class="chips"><span class="chip">PortOne 결제·웹훅</span><span class="chip">PACS</span><span class="chip">VAN</span><span class="chip">수탁검사 FTP / HTTPS</span><span class="chip">알림톡 API</span></div></div>
+        <div class="stack-row"><b>연동</b><div class="chips"><span class="chip">PortOne 결제·웹훅</span><span class="chip">VAN</span><span class="chip">수탁검사 FTP / HTTPS</span><span class="chip">알림톡 API</span></div></div>
       </div>
     </section>
 
@@ -200,7 +218,7 @@
           <p>병원정보시스템(OCS/EMR/ERP) 개발 및 유지보수 (C#, MSSQL, Oracle)</p>
           <ul>
             <li>MSSQL·Oracle 프로시저·트리거 개발, 조회 성능 개선, DB 장애 대응</li>
-            <li>PACS, VAN, 수탁검사, 알림톡 등 외부 시스템 연동</li>
+            <li>VAN, 수탁검사, 알림톡 등 외부 시스템 연동</li>
             <li>인천기독병원 Oracle → MSSQL 이전, 약 40개 병원 프로그램·웹 서버 배포</li>
           </ul>
         </article>
@@ -303,22 +321,6 @@
         </div>
       </article>
 
-      <article class="case">
-        <div class="case-head">
-          <p class="case-meta"><span class="no">CASE 06</span><span>이원헬스케어</span><span>MSSQL Trigger · Stored Procedure</span></p>
-          <h3>외부 시스템을 고칠 수 없을 때의 연동</h3>
-          <p class="result">개발 3일, 판독의 재입력 제거 <small>CVR 보고 흐름 기준</small></p>
-        </div>
-        <div class="steps">
-          <div class="step"><b>문제</b><p>판독의가 이상 결과(CVR)를 보고할 때마다 PACS 창을 나와 OCS에 다시 입력해야 했습니다. PACS 업체가 연동 개발은 어렵다고 해 요청이 한 번 철회됐습니다.</p></div>
-          <div class="step"><b>판단</b><p>PACS는 못 고치지만 판독 결과는 이미 OCS DB로 들어오고 있었습니다. 받는 쪽에서 해결하기로 했습니다.</p></div>
-          <div class="step"><b>구현</b><ul>
-            <li>판독결과 테이블 트리거에서 정해진 문구를 감지해 CVR 등록 프로시저 호출</li>
-            <li>변동이 많은 판독결과 테이블에서 판독문과 CVR 내용이 섞이지 않게 분리 로직 검증 후 반영</li>
-          </ul></div>
-          <div class="step"><b>결과</b><p>판독의가 PACS 창 안에서 CVR 보고까지 마칩니다. 같은 방식으로 수탁검사 결과 수신을 FTP에서 HTTPS로 바꿀 때도 공통코드 스위치로 두 방식을 전환할 수 있게 만들었습니다.</p></div>
-        </div>
-      </article>
     </section>
 
     <section aria-labelledby="more-title">
@@ -327,6 +329,7 @@
       <ul class="list-plain">
         <li><b>배포 자동화</b> · 더바디채널. release 브랜치를 합치면 k3s에 자동 배포되도록 GitHub Actions와 ArgoCD 구성. Git 설정이 곧 배포 상태라 이전 커밋으로 바로 되돌릴 수 있게 함.</li>
         <li><b>키오스크 수납 승인 오류</b> · 승인일자 8자리가 20자리 승인번호 형식과 맞지 않던 원인을 찾아 수납 프로시저에서 형식 변환, 오류 데이터 정리.</li>
+        <li><b>수탁검사 결과 수신 전환</b> · FTP만 받던 수신 로직에 HTTPS 수신을 추가하고 공통코드 스위치로 두 방식을 전환할 수 있게 구현.</li>
         <li><b>SMS 중복 발송</b> · 외부 브로커 이중 실행이 원인. 발송 프로시저에 중복 체크 추가.</li>
         <li><b>레거시 WinForms에 웹 도입</b> · Chromium 임베드로 Next.js 통계 대시보드를 기존 프로그램 안에서 구동, 종합병원 10곳 배포.</li>
       </ul>
@@ -336,14 +339,13 @@
       <p class="sec-label">05 / PROJECTS</p>
       <h2 id="projects-title">전체 프로젝트</h2>
       <div class="projects">
-        <a class="proj" href="/portfolio-details-pacs.html"><span class="proj-tag">실무 · 백엔드</span><b>영상의학 · PACS 연동</b><small>병원 28곳 PACS 요청 100건. 처방부터 결과 수신까지 연동 테이블을 단계별로 추적</small><i>MSSQL · Oracle · Procedure · Trigger</i></a>
-        <a class="proj" href="/portfolio-details-chagok.html"><span class="proj-tag">사이드 · 백엔드</span><b>차곡</b><small>여러 기기 공부 기록 서비스. 행 잠금과 부분 유니크 인덱스, outbox 기반 멱등 동기화</small><i>PostgreSQL · Supabase · TypeScript</i></a>
-        <a class="proj" href="/portfolio-details-dashboard.html"><span class="proj-tag">실무 · 웹</span><b>통계 대시보드</b><small>레거시 WinForms 안에 Chromium으로 띄운 경영통계 화면, 종합병원 10곳 배포</small><i>Next.js · Flask · MSSQL · Docker</i></a>
-        <a class="proj" href="/portfolio-details-fitsignal.html"><span class="proj-tag">실무 · 앱</span><b>FitSignal</b><small>워치 심박을 폰과 Firebase를 거쳐 TV에 1초 단위로 표시, 회원 시스템과 리워드 연동</small><i>React Native · Swift · Firebase</i></a>
-        <a class="proj" href="/portfolio-details-dalnim.html"><span class="proj-tag">사이드 · 앱</span><b>달님</b><small>iPhone과 Apple Watch 운동 기록. 오프라인 우선 동기화와 Firestore 보안 규칙 테스트</small><i>React Native · SwiftUI · Firestore</i></a>
-        <a class="proj" href="/portfolio-details-dday.html"><span class="proj-tag">사이드 · macOS</span><b>디데이</b><small>메뉴바와 데스크톱 위젯. 한국 대체공휴일 규칙 엔진과 EventKit 연동</small><i>Swift · WidgetKit · EventKit</i></a>
-        <a class="proj minor" href="/portfolio-details-Ivy.html"><span class="proj-tag">해커톤 우수상</span><b>IVY LEAGUER</b><small>외국인 유학생과 구직자를 위한 채용 플랫폼 MVP, 30시간 해커톤</small><i>Vue.js · Java</i></a>
-        <a class="proj minor" href="/portfolio-details.html"><span class="proj-tag">웹</span><b>VOIX</b><small>음악, 차트, 공연 정보를 모은 통합 서비스</small><i>Web</i></a>
+        <a class="proj" href="/portfolio-details-chagok.html"><span class="proj-thumb"><img src="assets/img/portfolio/portfolio-chagok.jpg" alt="차곡 공부 스톱워치와 사이트 차단 화면" loading="lazy" width="640" height="360"></span><span class="proj-tag">사이드 · 백엔드</span><b>차곡</b><small>여러 기기 공부 기록 서비스. 행 잠금과 부분 유니크 인덱스, outbox 기반 멱등 동기화</small><i>PostgreSQL · Supabase · TypeScript</i></a>
+        <a class="proj" href="/portfolio-details-dashboard.html"><span class="proj-thumb"><img src="assets/img/portfolio/portfolio-dashboard3.jpg" alt="병원 통계 대시보드 차트와 필터 화면" loading="lazy" width="640" height="360"></span><span class="proj-tag">실무 · 웹</span><b>통계 대시보드</b><small>레거시 WinForms 안에 Chromium으로 띄운 경영통계 화면, 종합병원 10곳 배포</small><i>Next.js · Flask · MSSQL · Docker</i></a>
+        <a class="proj" href="/portfolio-details-fitsignal.html"><span class="proj-thumb"><img src="assets/img/portfolio/portfolio-fitsignal.jpg" alt="FitSignal 운동 기록과 심박 분석 화면" loading="lazy" width="640" height="360"></span><span class="proj-tag">실무 · 앱</span><b>FitSignal</b><small>워치 심박을 폰과 Firebase를 거쳐 TV에 1초 단위로 표시, 회원 시스템과 리워드 연동</small><i>React Native · Swift · Firebase</i></a>
+        <a class="proj" href="/portfolio-details-dalnim.html"><span class="proj-thumb"><img src="assets/img/portfolio/portfolio-dalnim2.jpg" alt="달님 러닝 시작과 운동 기록 화면" loading="lazy" width="640" height="360"></span><span class="proj-tag">사이드 · 앱</span><b>달님</b><small>iPhone과 Apple Watch 운동 기록. 오프라인 우선 동기화와 Firestore 보안 규칙 테스트</small><i>React Native · SwiftUI · Firestore</i></a>
+        <a class="proj" href="/portfolio-details-dday.html"><span class="proj-thumb"><img src="assets/img/portfolio/portfolio-dday.jpg" alt="디데이 macOS 캘린더와 바탕화면 위젯" loading="lazy" width="640" height="360"></span><span class="proj-tag">사이드 · macOS</span><b>디데이</b><small>메뉴바와 데스크톱 위젯. 한국 대체공휴일 규칙 엔진과 EventKit 연동</small><i>Swift · WidgetKit · EventKit</i></a>
+        <a class="proj minor" href="/portfolio-details-Ivy.html"><span class="proj-thumb"><img src="assets/img/portfolio/portfolio-ivy.jpg" alt="IVY LEAGUER 채용 플랫폼 메인 화면" loading="lazy" width="640" height="360"></span><span class="proj-tag">해커톤 우수상</span><b>IVY LEAGUER</b><small>외국인 유학생과 구직자를 위한 채용 플랫폼 MVP, 30시간 해커톤</small><i>Vue.js · Java</i></a>
+        <a class="proj minor" href="/portfolio-details.html"><span class="proj-thumb"><img src="assets/img/portfolio/portfolio-voix.jpg" alt="VOIX 음악 통합 서비스 화면" loading="lazy" width="640" height="360"></span><span class="proj-tag">웹</span><b>VOIX</b><small>음악, 차트, 공연 정보를 모은 통합 서비스</small><i>Web</i></a>
       </div>
     </section>
   </main>
