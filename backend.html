@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <script>if(/\.github\.io$/.test(location.hostname))location.replace('https://simhyeoncheol.vercel.app'+location.pathname+location.search+location.hash);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5f6f4">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="심현철 Java 백엔드 포트폴리오. 결제 정합성, SQL 성능 개선, 레거시 DB 이전, 동시성 제어 사례.">
+  <meta property="og:title" content="심현철 | Backend Engineer">
+  <meta property="og:description" content="레거시 데이터 흐름을 추적해 정합성이 깨지지 않는 코드로 고칩니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://simhyeoncheol.vercel.app/backend.html">
+  <meta property="og:image" content="https://simhyeoncheol.vercel.app/assets/img/og-image.png">
+  <title>심현철 | Backend Engineer</title>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    :root{
+      --paper:#f5f6f4;--surface:#fff;--ink:#151b22;--muted:#5d6570;--soft:#868e96;--rule:#d9dddf;
+      --blue:#315dce;--blue-soft:#e7ebf9;--dark:#181e25;--dark-copy:#c4cbd2;
+      --mono:'SFMono-Regular',Consolas,'Liberation Mono',monospace;
+      --sans:-apple-system,BlinkMacSystemFont,'Pretendard','Noto Sans KR','Noto Sans CJK KR','Apple SD Gothic Neo','Malgun Gothic','Segoe UI',sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.7 var(--sans);word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .shell{max-width:920px;margin:0 auto;padding:0 16px}
+    @media (min-width:720px){.shell{padding:0 32px}}
+
+    header.top{border-bottom:1px solid var(--rule);background:var(--paper)}
+    header.top .shell{display:flex;justify-content:space-between;align-items:center;height:60px;gap:12px}
+    .brand{font:800 18px/1 var(--sans);letter-spacing:-.02em;text-decoration:none}
+    .brand span{color:var(--blue)}
+    .top-links{display:flex;gap:16px;font:12px/1 var(--mono);letter-spacing:.04em}
+    .top-links a{text-decoration:none;color:var(--muted)}
+    .top-links a:hover{color:var(--blue)}
+
+    .hero{padding:48px 0 32px}
+    .eyebrow{font:12px/1.4 var(--mono);letter-spacing:.08em;color:var(--blue);margin:0 0 14px}
+    h1{font-size:clamp(34px,7vw,52px);line-height:1.1;letter-spacing:-.03em;margin:0}
+    h1 span{color:var(--blue)}
+    .lede{font-size:clamp(18px,3.2vw,22px);line-height:1.5;font-weight:650;letter-spacing:-.01em;margin:18px 0 0;max-width:30em}
+    .sub{color:var(--muted);margin:12px 0 0;max-width:40em}
+    .contact{font:12px/1.5 var(--mono);color:var(--muted);margin:10px 0 0}
+    .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:28px 0 0}
+    @media (min-width:720px){.facts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+    .fact{background:var(--surface);padding:14px 16px}
+    .fact b{display:block;font-size:20px;letter-spacing:-.02em}
+    .fact small{color:var(--muted);font-size:12px;line-height:1.4;display:block;margin-top:2px}
+
+    section{padding:36px 0;border-top:1px solid var(--rule)}
+    .sec-label{font:12px/1 var(--mono);letter-spacing:.08em;color:var(--soft);margin:0 0 8px}
+    h2{font-size:24px;letter-spacing:-.02em;margin:0 0 18px}
+
+    .stack{display:grid;gap:10px}
+    .stack-row{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:baseline}
+    .stack-row b{font:600 12px/1.6 var(--mono);color:var(--muted);letter-spacing:.03em}
+    .chips{display:flex;flex-wrap:wrap;gap:6px}
+    .chip{font-size:13px;padding:2px 10px;border:1px solid var(--rule);background:var(--surface);border-radius:999px}
+    .chip.key{border-color:var(--blue);color:var(--blue);background:var(--blue-soft);font-weight:600}
+
+    .career{display:grid;gap:14px}
+    .job{background:var(--surface);border:1px solid var(--rule);padding:18px 18px 16px}
+    .job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;align-items:baseline}
+    .job-head h3{margin:0;font-size:17px}
+    .job-head span{font:12px/1.4 var(--mono);color:var(--muted)}
+    .job p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .job ul{margin:10px 0 0;padding-left:18px;font-size:14px}
+    .job li{margin:2px 0}
+
+    .case{background:var(--surface);border:1px solid var(--rule);margin:0 0 18px;break-inside:avoid;page-break-inside:avoid}
+    .case-head{padding:18px 18px 14px;border-bottom:1px solid var(--rule)}
+    .case-meta{display:flex;flex-wrap:wrap;gap:6px 12px;font:12px/1.5 var(--mono);color:var(--muted);margin:0 0 8px}
+    .case-meta .no{color:var(--blue);font-weight:700}
+    .case h3{margin:0;font-size:19px;line-height:1.4;letter-spacing:-.01em}
+    .result{display:inline-flex;align-items:baseline;gap:8px;margin:10px 0 0;padding:6px 12px;background:var(--blue-soft);color:var(--blue);font-weight:700;font-size:15px}
+    .result small{font-weight:500;color:var(--muted);font-size:12px}
+    .steps{display:grid;gap:0}
+    .step{display:grid;grid-template-columns:1fr;gap:2px;padding:12px 18px;border-top:1px solid #eef0f1}
+    .step:first-child{border-top:0}
+    @media (min-width:720px){.step{grid-template-columns:88px 1fr;gap:16px}}
+    .step b{font:600 12px/1.9 var(--mono);color:var(--soft);letter-spacing:.04em}
+    .step p,.step ul{margin:0;font-size:14.5px}
+    .step ul{padding-left:18px}
+    .step li{margin:1px 0}
+    code{font:13px/1 var(--mono);background:#f0f2f3;padding:2px 5px;border-radius:3px}
+
+    .list-plain{margin:0;padding-left:18px}
+    .list-plain li{margin:4px 0}
+    .note{font-size:13px;color:var(--muted)}
+
+    footer{padding:28px 0 48px;border-top:1px solid var(--rule);color:var(--muted);font-size:13px}
+    footer .shell{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+
+    @media print{
+      @page{size:A4;margin:14mm 12mm}
+      body{background:#fff;font-size:12.5px;line-height:1.6}
+      .shell{max-width:none;padding:0}
+      header.top .top-links{display:none}
+      header.top .shell{height:auto;padding-bottom:8px}
+      .hero{padding:16px 0 18px}
+      h1{font-size:34px}
+      .lede{font-size:17px}
+      .facts{grid-template-columns:repeat(4,1fr)}
+      section{padding:18px 0}
+      h2{font-size:19px;margin-bottom:12px}
+      .case,.job{border-color:#cfd4d7}
+      .step{grid-template-columns:72px 1fr;gap:12px;padding:8px 14px}
+      .step p,.step ul{font-size:12.5px}
+      .case-head{padding:12px 14px 10px}
+      .case h3{font-size:15.5px}
+      .chip{font-size:11.5px}
+      a{text-decoration:none}
+      .break{break-before:page;page-break-before:always;border-top:0}
+      .hero{padding:10px 0 12px}
+      .lede{margin-top:12px}
+      .facts{margin-top:16px}
+      .stack{gap:6px}
+      .job{break-inside:avoid;page-break-inside:avoid;padding:12px 14px}
+      .career{display:block}
+      .career .job{margin-bottom:10px}
+      h2{break-after:avoid;page-break-after:avoid}
+      footer{display:none}
+      main > section:last-of-type{padding-bottom:6px}
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="shell">
+      <a class="brand" href="/">SHC<span>.</span> Backend</a>
+      <nav class="top-links" aria-label="링크">
+        <a href="#cases">CASES</a>
+        <a href="/">FULL PORTFOLIO ↗</a>
+        <a href="https://github.com/simhyeoncheol" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell">
+    <div class="hero">
+      <p class="eyebrow">BACKEND ENGINEER / JAVA · SPRING / 2024.02 —</p>
+      <h1>심현철<span>.</span></h1>
+      <p class="lede">레거시 데이터 흐름을 끝까지 추적하고<br>정합성이 깨지지 않는 코드로 고칩니다.</p>
+      <p class="sub">병원정보시스템(MSSQL, Oracle) 2년 6개월과 피트니스 ERP(Java, Spring, MyBatis, MySQL)에서 결제 정합성, SQL 성능, DB 이전, 외부 시스템 연동을 맡았습니다.</p>
+      <p class="contact">simhyeoncheol3@gmail.com · simhyeoncheol.vercel.app · github.com/simhyeoncheol</p>
+      <div class="facts" role="list">
+        <div class="fact" role="listitem"><b>40s → 1.78s</b><small>월별 진료 통계 조회 1회 응답 시간</small></div>
+        <div class="fact" role="listitem"><b>13s → 3s</b><small>퇴원심사 조회 프로시저 1회 실행 시간</small></div>
+        <div class="fact" role="listitem"><b>289건</b><small>병원 42곳 OCS/EMR 소스·프로시저 직접 수정</small></div>
+        <div class="fact" role="listitem"><b>12 → 1</b><small>동시 세션 시작 12건 중 생성된 활성 세션 수</small></div>
+      </div>
+    </div>
+
+    <section aria-labelledby="stack-title">
+      <p class="sec-label">01 / STACK</p>
+      <h2 id="stack-title">기술 스택</h2>
+      <div class="stack">
+        <div class="stack-row"><b>Backend</b><div class="chips"><span class="chip key">Java</span><span class="chip key">Spring MVC / Boot</span><span class="chip key">MyBatis</span><span class="chip">Spring Security</span><span class="chip">JPA</span><span class="chip">REST API</span></div></div>
+        <div class="stack-row"><b>Database</b><div class="chips"><span class="chip key">MySQL</span><span class="chip key">MSSQL</span><span class="chip key">Oracle</span><span class="chip">PostgreSQL</span><span class="chip">Stored Procedure · Trigger</span><span class="chip">실행 계획 · DMV</span></div></div>
+        <div class="stack-row"><b>Infra</b><div class="chips"><span class="chip">Docker</span><span class="chip">Kubernetes (k3s)</span><span class="chip">ArgoCD</span><span class="chip">GitHub Actions</span><span class="chip">AWS EC2 · Linux</span></div></div>
+        <div class="stack-row"><b>연동</b><div class="chips"><span class="chip">PortOne 결제·웹훅</span><span class="chip">PACS</span><span class="chip">VAN</span><span class="chip">수탁검사 FTP / HTTPS</span><span class="chip">알림톡 API</span></div></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="career-title">
+      <p class="sec-label">02 / CAREER</p>
+      <h2 id="career-title">경력</h2>
+      <div class="career">
+        <article class="job">
+          <div class="job-head"><h3>(주)더바디채널 · 운동컨텐츠연구개발팀 대리</h3><span>2026.08 — 2026.11 · 계약 만료</span></div>
+          <p>통합 ERP 백엔드 (Java 8, Spring MVC, Spring Security, MyBatis, MySQL, Tomcat)</p>
+          <ul>
+            <li>결제·정산, 승인, 포인트 기능 개발 및 PortOne 결제·환불 연동</li>
+            <li>REST API 개발, 외부 시스템 연동 (PortOne, 알리고, Kakao Map)</li>
+            <li>Docker, k3s, ArgoCD 기반 배포 자동화 및 무중단 배포 구축</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="job-head"><h3>이원헬스케어(주) · 솔루션운영팀 전임연구원</h3><span>2024.02 — 2026.07 · 2년 6개월</span></div>
+          <p>병원정보시스템(OCS/EMR/ERP) 개발 및 유지보수 (C#, MSSQL, Oracle)</p>
+          <ul>
+            <li>MSSQL·Oracle 프로시저·트리거 개발, 조회 성능 개선, DB 장애 대응</li>
+            <li>PACS, VAN, 수탁검사, 알림톡 등 외부 시스템 연동</li>
+            <li>인천기독병원 Oracle → MSSQL 이전, 약 40개 병원 프로그램·웹 서버 배포</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="cases" aria-labelledby="cases-title">
+      <p class="sec-label">03 / CASES</p>
+      <h2 id="cases-title">문제를 어떻게 풀었나</h2>
+
+      <article class="case">
+        <div class="case-head">
+          <p class="case-meta"><span class="no">CASE 01</span><span>더바디채널 ERP</span><span>Java · Spring · MyBatis · MySQL · PortOne</span></p>
+          <h3>결제사 응답과 내부 결제 상태가 어긋나지 않게</h3>
+          <p class="result">결제 상태 불일치 지점 문의 해소 <small>운영 중 지점 문의 기준</small></p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>문제</b><p>PortOne 웹훅이 누락되거나 순서가 뒤바뀌어 도착했습니다. 취소 뒤 결제 완료 웹훅이 늦게 오면 이미 취소된 결제가 다시 완료로 바뀌었고, 취소 결과와 내부 환불 기록이 어긋나는 경우도 있었습니다. 일괄결제 웹훅에서는 상품 발급과 매출 반영이 빠졌습니다.</p></div>
+          <div class="step"><b>판단</b><p>웹훅이 언제 몇 번 오는지는 PG사가 정합니다. 받는 쪽이 중복, 순서 뒤바뀜, 누락을 모두 견뎌야 한다고 보고 웹훅을 결제 상태의 근거가 아닌 확인 신호로만 쓰기로 했습니다.</p></div>
+          <div class="step"><b>구현</b><ul>
+            <li>웹훅 수신 시 PortOne 결제 조회 API로 실제 상태를 다시 확인</li>
+            <li>결제 ID 기준 처리 이력으로 같은 웹훅 중복 처리 차단</li>
+            <li>취소 → 완료 같은 상태 역행을 막는 전이 검사</li>
+            <li>미완료 결제를 주기적으로 조회해 누락된 웹훅 보정</li>
+            <li>푸시 알림 같은 후처리 예외를 본 처리와 분리해 환불 기록이 롤백되지 않게 처리</li>
+          </ul></div>
+          <div class="step"><b>결과</b><p>결제 상태가 맞지 않는다는 지점 문의가 더 이상 들어오지 않았습니다. 같은 맥락으로 0원 결제와 유효기간 변경, 양도에 GM 승인 절차와 사전 검증을 추가했습니다.</p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <p class="case-meta"><span class="no">CASE 02</span><span>이원헬스케어 통계 개선 프로젝트</span><span>MSSQL · Oracle · 실행 계획</span></p>
+          <h3>월별 진료 통계 40초를 1.78초로</h3>
+          <p class="result">40s → 1.78s, 약 22배 <small>같은 조건의 월별 진료 통계 조회 1회</small></p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>문제</b><p>월별 진료 통계 하나를 띄우는 데 40초가 걸려 통계팀이 화면을 켜 두고 기다렸습니다.</p></div>
+          <div class="step"><b>판단</b><p>실행 계획에서 Table Scan과 Key Lookup 비용이 큰 구간부터 봤습니다. 기본키가 WHERE 조건에 없어 전체 스캔을 하고 있었고, 스칼라 함수와 조건절 함수 때문에 인덱스를 타지 못했습니다. 진료, 처방, 수납 같은 큰 테이블을 한 번에 조인하면서 실행 계획도 틀어져 있었습니다.</p></div>
+          <div class="step"><b>구현</b><ul>
+            <li>키 기준으로 조건 수정, 필요한 인덱스 추가</li>
+            <li>조건절과 SELECT 절의 함수 제거</li>
+            <li>기간으로 먼저 줄인 중간 결과를 임시 테이블에 담고 인덱스를 건 뒤 조인</li>
+          </ul></div>
+          <div class="step"><b>결과</b><p>40초에서 1.78초로 줄었습니다. 같은 방식으로 퇴원심사 조회도 손봤는데, 행마다 호출되던 스칼라 함수와 함수 조건절을 걷어내 프로시저 3개를 고쳤고 프로시저당 13초에서 약 3초가 됐습니다.</p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <p class="case-meta"><span class="no">CASE 03</span><span>인천기독병원</span><span>Oracle → MSSQL</span></p>
+          <h3>운영 중인 병원 DB를 Oracle에서 MSSQL로 옮기기</h3>
+          <p class="result">진료 중단 없이 전환 <small>야간 이관 후 건수·금액 대사</small></p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>문제</b><p>진료가 멈추면 안 되는 병원에서 DB를 바꿔야 했습니다. 프로시저 10개 정도를 MSSQL로 옮기면서 NVL, DECODE, 시퀀스, 날짜 함수를 바꿔야 했습니다.</p></div>
+          <div class="step"><b>판단</b><p>문법만 바꿔서는 결과가 같다는 보장이 없다고 봤습니다. 전환 테스트에서 건수가 맞지 않는 쿼리가 나왔고, 원인은 Oracle이 빈 문자열을 NULL로 보고 MSSQL은 그렇지 않다는 차이였습니다.</p></div>
+          <div class="step"><b>구현</b><ul>
+            <li>빈 문자열과 NULL을 다루는 조건을 프로시저마다 다시 확인해 수정</li>
+            <li>야간에 이관한 뒤 주요 테이블의 건수와 금액 합계를 양쪽 DB에서 비교</li>
+          </ul></div>
+          <div class="step"><b>결과</b><p>진료 중단 없이 전환했습니다. 레거시 로직을 새 환경으로 옮길 때는 같은 입력에 같은 결과가 나오는지 숫자로 맞춰 보는 단계를 빼지 않습니다.</p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <p class="case-meta"><span class="no">CASE 04</span><span>사이드 프로젝트 차곡 (1인 개발)</span><span>PostgreSQL 17 · Supabase · TypeScript</span></p>
+          <h3>여러 기기가 동시에 요청해도 결과가 하나로</h3>
+          <p class="result">동시 시작 12건 → 활성 세션 1건 <small>실제 PostgreSQL 동시 연결 테스트</small></p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>문제</b><p>같은 계정으로 두 기기가 동시에 공부 세션을 시작하면 활성 세션이 두 개 생길 수 있었습니다. 오프라인에서 쌓인 명령은 재연결 때 다시 보내므로 같은 명령이 여러 번 도착합니다.</p></div>
+          <div class="step"><b>판단</b><p>애플리케이션에서 조회한 뒤 저장하는 방식으로는 경쟁 조건을 막을 수 없습니다. 직렬화와 중복 제거를 DB 트랜잭션과 제약 조건에 맡기기로 했습니다.</p></div>
+          <div class="step"><b>구현</b><ul>
+            <li>트랜잭션 안에서 사용자 행을 <code>SELECT … FOR UPDATE</code>로 잠가 직렬화</li>
+            <li>활성 세션에 부분 유니크 인덱스</li>
+            <li>명령을 outbox에 먼저 기록하고 commandId(PK)로 재전송해 서버에서 멱등 처리</li>
+            <li><code>expectedVersion</code> 기반 낙관적 동시성 제어로 수정 충돌 감지</li>
+          </ul></div>
+          <div class="step"><b>결과</b><p>동시 시작 12건에 활성 세션 1건, 같은 commandId 8건에 이벤트 1건이 남았습니다. Vitest와 PGlite로 권한 경계와 동시성까지 약 200개 테스트를 작성했습니다.</p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <p class="case-meta"><span class="no">CASE 05</span><span>이원헬스케어</span><span>MSSQL · DMV · Oracle Listener</span></p>
+          <h3>오전마다 멈추던 수납 화면과 DB 장애</h3>
+          <p class="result">오전 수납 멈춤 문의 해소 <small>장애 원인 특정 후 재발 기준</small></p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>문제</b><p>외래가 몰리는 오전에 여러 병원에서 수납 화면이 멈춘다는 전화가 동시에 왔습니다.</p></div>
+          <div class="step"><b>판단</b><p>DMV로 블로킹 세션과 원인 프로시저를 특정했습니다. 처방 저장과 수납 처리가 같은 테이블들을 서로 다른 순서로 갱신해 데드락이 났고, 인덱스 없는 조회가 락을 오래 잡고 있었습니다.</p></div>
+          <div class="step"><b>구현</b><ul>
+            <li>두 처리의 테이블 갱신 순서 통일</li>
+            <li>트랜잭션 안의 불필요한 조회를 밖으로 이동, 인덱스 추가</li>
+            <li>반복 지연은 인덱스 REBUILD와 통계 갱신으로 대응</li>
+          </ul></div>
+          <div class="step"><b>결과</b><p>오전 수납 멈춤 문의가 사라졌습니다. 응급실 NEDIS 연동 DB 연결 장애는 Oracle Listener를 점검한 뒤 서버 디스크 부족으로 원인을 찾아 당일 복구했습니다.</p></div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case-head">
+          <p class="case-meta"><span class="no">CASE 06</span><span>이원헬스케어</span><span>MSSQL Trigger · Stored Procedure</span></p>
+          <h3>외부 시스템을 고칠 수 없을 때의 연동</h3>
+          <p class="result">개발 3일, 판독의 재입력 제거 <small>CVR 보고 흐름 기준</small></p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>문제</b><p>판독의가 이상 결과(CVR)를 보고할 때마다 PACS 창을 나와 OCS에 다시 입력해야 했습니다. PACS 업체가 연동 개발은 어렵다고 해 요청이 한 번 철회됐습니다.</p></div>
+          <div class="step"><b>판단</b><p>PACS는 못 고치지만 판독 결과는 이미 OCS DB로 들어오고 있었습니다. 받는 쪽에서 해결하기로 했습니다.</p></div>
+          <div class="step"><b>구현</b><ul>
+            <li>판독결과 테이블 트리거에서 정해진 문구를 감지해 CVR 등록 프로시저 호출</li>
+            <li>변동이 많은 판독결과 테이블에서 판독문과 CVR 내용이 섞이지 않게 분리 로직 검증 후 반영</li>
+          </ul></div>
+          <div class="step"><b>결과</b><p>판독의가 PACS 창 안에서 CVR 보고까지 마칩니다. 같은 방식으로 수탁검사 결과 수신을 FTP에서 HTTPS로 바꿀 때도 공통코드 스위치로 두 방식을 전환할 수 있게 만들었습니다.</p></div>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="more-title">
+      <p class="sec-label">04 / MORE</p>
+      <h2 id="more-title">그 밖의 작업</h2>
+      <ul class="list-plain">
+        <li><b>배포 자동화</b> · 더바디채널. release 브랜치를 합치면 k3s에 자동 배포되도록 GitHub Actions와 ArgoCD 구성. Git 설정이 곧 배포 상태라 이전 커밋으로 바로 되돌릴 수 있게 함.</li>
+        <li><b>키오스크 수납 승인 오류</b> · 승인일자 8자리가 20자리 승인번호 형식과 맞지 않던 원인을 찾아 수납 프로시저에서 형식 변환, 오류 데이터 정리.</li>
+        <li><b>SMS 중복 발송</b> · 외부 브로커 이중 실행이 원인. 발송 프로시저에 중복 체크 추가.</li>
+        <li><b>레거시 WinForms에 웹 도입</b> · Chromium 임베드로 Next.js 통계 대시보드를 기존 프로그램 안에서 구동, 종합병원 10곳 배포.</li>
+      </ul>
+      <p class="note">앱과 웨어러블 프로젝트(FitSignal, 달님 등)는 전체 포트폴리오에 있습니다.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <span>심현철 · simhyeoncheol3@gmail.com</span>
+      <span>전체 포트폴리오 simhyeoncheol.vercel.app · github.com/simhyeoncheol</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,5 +1,12 @@
 {
   "rewrites": [
-    { "source": "/r/:company", "destination": "/r.html" }
+    {
+      "source": "/r/:company",
+      "destination": "/r.html"
+    },
+    {
+      "source": "/b/:company",
+      "destination": "/backend.html"
+    }
   ]
 }
