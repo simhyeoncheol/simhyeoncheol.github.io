@@ -92,6 +92,15 @@
     .list-plain li{margin:4px 0}
     .note{font-size:13px;color:var(--muted)}
 
+    .projects{display:grid;grid-template-columns:1fr;gap:10px}
+    @media (min-width:640px){.projects{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    .proj{display:flex;flex-direction:column;gap:4px;background:var(--surface);border:1px solid var(--rule);padding:14px 16px;text-decoration:none;transition:border-color .15s}
+    .proj:hover{border-color:var(--blue)}
+    .proj-tag{font:11px/1.4 var(--mono);color:var(--blue);letter-spacing:.04em}
+    .proj b{font-size:16px}
+    .proj small{color:var(--muted);font-size:13.5px;line-height:1.55}
+    .proj i{font:normal 12px/1.4 var(--mono);color:var(--soft);margin-top:2px}
+
     footer{padding:28px 0 48px;border-top:1px solid var(--rule);color:var(--muted);font-size:13px}
     footer .shell{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
 
@@ -124,6 +133,13 @@
       .career .job{margin-bottom:10px}
       h2{break-after:avoid;page-break-after:avoid}
       footer{display:none}
+      .projects{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+      .proj{padding:8px 10px;break-inside:avoid}
+      .proj b{font-size:13px}
+      .proj small{font-size:11px;line-height:1.45}
+      .proj i{display:none}
+      .proj.minor{display:none}
+      .proj-tag{font-size:10px}
       main > section:last-of-type{padding-bottom:6px}
     }
   </style>
@@ -314,7 +330,21 @@
         <li><b>SMS 중복 발송</b> · 외부 브로커 이중 실행이 원인. 발송 프로시저에 중복 체크 추가.</li>
         <li><b>레거시 WinForms에 웹 도입</b> · Chromium 임베드로 Next.js 통계 대시보드를 기존 프로그램 안에서 구동, 종합병원 10곳 배포.</li>
       </ul>
-      <p class="note">앱과 웨어러블 프로젝트(FitSignal, 달님 등)는 전체 포트폴리오에 있습니다.</p>
+    </section>
+
+    <section aria-labelledby="projects-title">
+      <p class="sec-label">05 / PROJECTS</p>
+      <h2 id="projects-title">전체 프로젝트</h2>
+      <div class="projects">
+        <a class="proj" href="/portfolio-details-pacs.html"><span class="proj-tag">실무 · 백엔드</span><b>영상의학 · PACS 연동</b><small>병원 28곳 PACS 요청 100건. 처방부터 결과 수신까지 연동 테이블을 단계별로 추적</small><i>MSSQL · Oracle · Procedure · Trigger</i></a>
+        <a class="proj" href="/portfolio-details-chagok.html"><span class="proj-tag">사이드 · 백엔드</span><b>차곡</b><small>여러 기기 공부 기록 서비스. 행 잠금과 부분 유니크 인덱스, outbox 기반 멱등 동기화</small><i>PostgreSQL · Supabase · TypeScript</i></a>
+        <a class="proj" href="/portfolio-details-dashboard.html"><span class="proj-tag">실무 · 웹</span><b>통계 대시보드</b><small>레거시 WinForms 안에 Chromium으로 띄운 경영통계 화면, 종합병원 10곳 배포</small><i>Next.js · Flask · MSSQL · Docker</i></a>
+        <a class="proj" href="/portfolio-details-fitsignal.html"><span class="proj-tag">실무 · 앱</span><b>FitSignal</b><small>워치 심박을 폰과 Firebase를 거쳐 TV에 1초 단위로 표시, 회원 시스템과 리워드 연동</small><i>React Native · Swift · Firebase</i></a>
+        <a class="proj" href="/portfolio-details-dalnim.html"><span class="proj-tag">사이드 · 앱</span><b>달님</b><small>iPhone과 Apple Watch 운동 기록. 오프라인 우선 동기화와 Firestore 보안 규칙 테스트</small><i>React Native · SwiftUI · Firestore</i></a>
+        <a class="proj" href="/portfolio-details-dday.html"><span class="proj-tag">사이드 · macOS</span><b>디데이</b><small>메뉴바와 데스크톱 위젯. 한국 대체공휴일 규칙 엔진과 EventKit 연동</small><i>Swift · WidgetKit · EventKit</i></a>
+        <a class="proj minor" href="/portfolio-details-Ivy.html"><span class="proj-tag">해커톤 우수상</span><b>IVY LEAGUER</b><small>외국인 유학생과 구직자를 위한 채용 플랫폼 MVP, 30시간 해커톤</small><i>Vue.js · Java</i></a>
+        <a class="proj minor" href="/portfolio-details.html"><span class="proj-tag">웹</span><b>VOIX</b><small>음악, 차트, 공연 정보를 모은 통합 서비스</small><i>Web</i></a>
+      </div>
     </section>
   </main>
 
