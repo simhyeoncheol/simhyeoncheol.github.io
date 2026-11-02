@@ -36,7 +36,9 @@
       '.visitor-badge.floating{position:fixed;top:14px;right:16px;z-index:9999;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.92);border:1px solid #d9dddf;box-shadow:0 2px 8px rgba(0,0,0,.06)}';
     document.head.appendChild(css);
     var slot = document.querySelector('.header-actions');
+    var bar = document.querySelector('header.top .shell'); // backend.html
     if (slot) slot.insertBefore(el, slot.firstChild);
+    else if (bar) bar.appendChild(el);
     else { el.classList.add('floating'); document.body.appendChild(el); }
   }
 })();
