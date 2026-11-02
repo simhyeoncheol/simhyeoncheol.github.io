@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/r/:company", "destination": "/r.html" }
+  ]
+}
